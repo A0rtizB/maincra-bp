@@ -1,0 +1,55 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "vatonage:steam",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "steam",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry": "geometry.steamoff",
+         "minecraft:destroy_time": 1,
+         "minecraft:loot": "loot_tables/blocks/steam.json",
+         "minecraft:block_light_absorption": 0,
+         "minecraft:on_interact": {
+            "target": "other",
+            "event": "vatonage:fill",
+            "condition": "query.get_equipped_item_name == 'water_bucket'"
+         },
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 0.4, 0.4 ],
+            "on_tick": {
+               "event": "vatonage:generate",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "vatonage:fill": {
+            "set_block": {
+               "block_type": "vatonage:steam_active"
+            },
+            "decrement_stack": {
+            },
+            "run_command": {
+               "command": "give @p bucket"
+            }
+         },
+         "vatonage:generate": {
+            "run_command": {
+               "command": "function auto_steam"
+            }
+         }
+      }
+   }
+}

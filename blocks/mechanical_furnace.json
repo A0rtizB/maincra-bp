@@ -1,0 +1,121 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:block":{
+      "description":{
+         "identifier":"vatonage:mechanical_furnace",
+         "register_to_creative_menu":true
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"mechanical_furnace",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin":[
+               -8,
+               0,
+               -8
+            ],
+            "size":[
+               16,
+               16,
+               16
+            ]
+         },
+         "minecraft:geometry":"geometry.mechanical_furnace",
+         "minecraft:destroy_time":1,
+         "minecraft:block_light_absorption":0,
+         "minecraft:on_interact":{
+            "event":"vatonage:fill"
+         },
+         "minecraft:ticking":{
+            "looping":true,
+            "range":[
+               0.4,
+               0.4
+            ],
+            "on_tick":{
+               "event":"vatonage:generate",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "vatonage:fill":{
+            "sequence":[
+               {
+                  "condition":"query.get_equipped_item_name == 'iron_ore' || query.get_equipped_item_name == 'raw_iron'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_mechanical_iron"
+                  },
+                  "decrement_stack":{
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gold_ore' || query.get_equipped_item_name == 'raw_gold'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_mechanical_gold"
+                  },
+                  "decrement_stack":{
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'coal_ore'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_mechanical_coal"
+                  },
+                  "decrement_stack":{
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'lapis_ore'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_mechanical_lapis"
+                  },
+                  "decrement_stack":{
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'diamond_ore'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_mechanical_diamond"
+                  },
+                  "decrement_stack":{
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'emerald_ore'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_mechanical_emerald"
+                  },
+                  "decrement_stack":{
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'redstone_ore'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_mechanical_redstone"
+                  },
+                  "decrement_stack":{
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'copper_ore' || query.get_equipped_item_name == 'raw_copper'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_mechanical_copper"
+                  },
+                  "decrement_stack":{
+                  }
+               }
+            ]
+         },
+         "vatonage:generate":{
+            "run_command":{
+               "command":"function auto_mechanical"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,48 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "vatonage:endcake",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "endcake",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 8, 16]
+         },
+         "minecraft:entity_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 8, 16]
+         },
+         "minecraft:geometry": "geometry.endcake",
+         "minecraft:destroy_time": 1,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:on_interact": {
+            "target": "other",
+            "event": "vatonage:generate"
+         },
+         "minecraft:on_placed": {
+            "target": "other",
+            "event": "vatonage:new"
+         }
+      },
+      "events": {
+         "vatonage:generate": {
+            "run_command": {
+               "command": "function tpend"
+            }
+         },
+         "vatonage:new": {
+            "run_command": {
+               "command": "function toend"
+            }
+         }
+      }
+   }
+}

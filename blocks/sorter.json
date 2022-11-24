@@ -1,0 +1,2058 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"vatonage:sorter",
+         "properties":{
+            "vatonage:store1":[
+               0,
+               1,
+               2,
+               3,
+               4,
+               5,
+               6,
+               7,
+               8,
+               9,
+               10,
+               11,
+               12,
+               13,
+               14,
+               15
+            ],
+            "vatonage:store2":[
+               0,
+               1,
+               2,
+               3,
+               4,
+               5,
+               6,
+               7,
+               8,
+               9,
+               10,
+               11,
+               12,
+               13,
+               14,
+               15
+            ],
+            "vatonage:store3":[
+               0,
+               1,
+               2,
+               3,
+               4,
+               5,
+               6,
+               7,
+               8,
+               9,
+               10,
+               11,
+               12,
+               13,
+               14,
+               15
+            ],
+            "vatonage:store4":[
+               0,
+               1,
+               2,
+               3,
+               4,
+               5,
+               6,
+               7,
+               8,
+               9,
+               10,
+               11,
+               12,
+               13,
+               14,
+               15
+            ],
+            "vatonage:store5":[
+               0,
+               1,
+               2,
+               3,
+               4,
+               5,
+               6,
+               7,
+               8,
+               9,
+               10,
+               11,
+               12,
+               13,
+               14,
+               15
+            ]
+         }
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"sorter",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin":[
+               -8,
+               0,
+               -8
+            ],
+            "size":[
+               16,
+               16,
+               16
+            ]
+         },
+         "minecraft:loot":"loot_tables/blocks/sorter.json",
+         "minecraft:entity_collision":{
+            "origin":[
+               -8,
+               0,
+               -8
+            ],
+            "size":[
+               16,
+               16,
+               16
+            ]
+         },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill"
+               },
+         "minecraft:geometry":"geometry.sorter",
+         "minecraft:destroy_time":0.5,
+         "minecraft:block_light_absorption":0
+      },
+      "events":{
+         "vatonage:amethyst_shard":{
+            "run_command":{
+               "command":"function sorter/amethyst_shard"
+            }
+         },
+         "vatonage:ancient_debris":{
+            "run_command":{
+               "command":"function sorter/ancient_debris"
+            }
+         },
+         "vatonage:arrow":{
+            "run_command":{
+               "command":"function sorter/arrow"
+            }
+         },
+         "vatonage:bamboo":{
+            "run_command":{
+               "command":"function sorter/bamboo"
+            }
+         },
+         "vatonage:blaze_rod":{
+            "run_command":{
+               "command":"function sorter/blaze_rod"
+            }
+         },
+         "vatonage:bone":{
+            "run_command":{
+               "command":"function sorter/bone"
+            }
+         },
+         "vatonage:carrot":{
+            "run_command":{
+               "command":"function sorter/carrot"
+            }
+         },
+         "vatonage:clay_ball":{
+            "run_command":{
+               "command":"function sorter/clay_ball"
+            }
+         },
+         "vatonage:clay_block":{
+            "run_command":{
+               "command":"function sorter/clay_block"
+            }
+         },
+         "vatonage:coal":{
+            "run_command":{
+               "command":"function sorter/coal"
+            }
+         },
+         "vatonage:coal_ore":{
+            "run_command":{
+               "command":"function sorter/coal_ore"
+            }
+         },
+         "vatonage:cobblestone":{
+            "run_command":{
+               "command":"function sorter/cobblestone"
+            }
+         },
+         "vatonage:copper_ingot":{
+            "run_command":{
+               "command":"function sorter/copper_ingot"
+            }
+         },
+         "vatonage:copper_ore":{
+            "run_command":{
+               "command":"function sorter/copper_ore"
+            }
+         },
+         "vatonage:deepslate":{
+            "run_command":{
+               "command":"function sorter/deepslate"
+            }
+         },
+         "vatonage:diamond":{
+            "run_command":{
+               "command":"function sorter/diamond"
+            }
+         },
+         "vatonage:diamond_nugget":{
+            "run_command":{
+               "command":"function sorter/diamond_nugget"
+            }
+         },
+         "vatonage:diamond_ore":{
+            "run_command":{
+               "command":"function sorter/diamond_ore"
+            }
+         },
+         "vatonage:dirt":{
+            "run_command":{
+               "command":"function sorter/dirt"
+            }
+         },
+         "vatonage:emerald":{
+            "run_command":{
+               "command":"function sorter/emerald"
+            }
+         },
+         "vatonage:emerald_nugget":{
+            "run_command":{
+               "command":"function sorter/emerald_nugget"
+            }
+         },
+         "vatonage:emerald_ore":{
+            "run_command":{
+               "command":"function sorter/emerald_ore"
+            }
+         },
+         "vatonage:ender_pearl":{
+            "run_command":{
+               "command":"function sorter/ender_pearl"
+            }
+         },
+         "vatonage:end_stone":{
+            "run_command":{
+               "command":"function sorter/end_stone"
+            }
+         },
+         "vatonage:experience_bottle":{
+            "run_command":{
+               "command":"function sorter/experience_bottle"
+            }
+         },
+         "vatonage:feather":{
+            "run_command":{
+               "command":"function sorter/feather"
+            }
+         },
+         "vatonage:glass":{
+            "run_command":{
+               "command":"function sorter/glass"
+            }
+         },
+         "vatonage:glowstone_dust":{
+            "run_command":{
+               "command":"function sorter/glowstone_dust"
+            }
+         },
+         "vatonage:gold_ingot":{
+            "run_command":{
+               "command":"function sorter/gold_ingot"
+            }
+         },
+         "vatonage:gold_nugget":{
+            "run_command":{
+               "command":"function sorter/gold_nugget"
+            }
+         },
+         "vatonage:gold_ore":{
+            "run_command":{
+               "command":"function sorter/gold_ore"
+            }
+         },
+         "vatonage:gravel":{
+            "run_command":{
+               "command":"function sorter/gravel"
+            }
+         },
+         "vatonage:gunpowder":{
+            "run_command":{
+               "command":"function sorter/gunpowder"
+            }
+         },
+         "vatonage:honeycomb":{
+            "run_command":{
+               "command":"function sorter/honeycomb"
+            }
+         },
+         "vatonage:honey_bottle":{
+            "run_command":{
+               "command":"function sorter/honey_bottle"
+            }
+         },
+         "vatonage:iron_ingot":{
+            "run_command":{
+               "command":"function sorter/iron_ingot"
+            }
+         },
+         "vatonage:iron_nugget":{
+            "run_command":{
+               "command":"function sorter/iron_nugget"
+            }
+         },
+         "vatonage:iron_ore":{
+            "run_command":{
+               "command":"function sorter/iron_ore"
+            }
+         },
+         "vatonage:lapis":{
+            "run_command":{
+               "command":"function sorter/lapis"
+            }
+         },
+         "vatonage:lapis_ore":{
+            "run_command":{
+               "command":"function sorter/lapis_ore"
+            }
+         },
+         "vatonage:leather":{
+            "run_command":{
+               "command":"function sorter/leather"
+            }
+         },
+         "vatonage:netherite_ingot":{
+            "run_command":{
+               "command":"function sorter/netherite_ingot"
+            }
+         },
+         "vatonage:netherite_scrap":{
+            "run_command":{
+               "command":"function sorter/netherite_scrap"
+            }
+         },
+         "vatonage:netherrack":{
+            "run_command":{
+               "command":"function sorter/netherrack"
+            }
+         },
+         "vatonage:nether_quartz":{
+            "run_command":{
+               "command":"function sorter/nether_quartz"
+            }
+         },
+         "vatonage:oak_log":{
+            "run_command":{
+               "command":"function sorter/oak_log"
+            }
+         },
+         "vatonage:oak_planks":{
+            "run_command":{
+               "command":"function sorter/oak_planks"
+            }
+         },
+         "vatonage:obsidian":{
+            "run_command":{
+               "command":"function sorter/obsidian"
+            }
+         },
+         "vatonage:potato":{
+            "run_command":{
+               "command":"function sorter/potato"
+            }
+         },
+         "vatonage:quartz_block":{
+            "run_command":{
+               "command":"function sorter/quartz_block"
+            }
+         },
+         "vatonage:raw_copper":{
+            "run_command":{
+               "command":"function sorter/raw_copper"
+            }
+         },
+         "vatonage:raw_gold":{
+            "run_command":{
+               "command":"function sorter/raw_gold"
+            }
+         },
+         "vatonage:raw_iron":{
+            "run_command":{
+               "command":"function sorter/raw_iron"
+            }
+         },
+         "vatonage:redstone":{
+            "run_command":{
+               "command":"function sorter/redstone"
+            }
+         },
+         "vatonage:redstone_ore":{
+            "run_command":{
+               "command":"function sorter/redstone_ore"
+            }
+         },
+         "vatonage:rotten_flesh":{
+            "run_command":{
+               "command":"function sorter/rotten_flesh"
+            }
+         },
+         "vatonage:sand":{
+            "run_command":{
+               "command":"function sorter/sand"
+            }
+         },
+         "vatonage:scute":{
+            "run_command":{
+               "command":"function sorter/scute"
+            }
+         },
+         "vatonage:soul_sand":{
+            "run_command":{
+               "command":"function sorter/soul_sand"
+            }
+         },
+         "vatonage:cobblestone":{
+            "run_command":{
+               "command":"function sorter/cobblestone"
+            }
+         },
+         "vatonage:string":{
+            "run_command":{
+               "command":"function sorter/string"
+            }
+         },
+         "vatonage:sugar_cane":{
+            "run_command":{
+               "command":"function sorter/sugar_cane"
+            }
+         },
+         "vatonage:wheat":{
+            "run_command":{
+               "command":"function sorter/wheat"
+            }
+         },
+         "vatonage:wheat_seeds":{
+            "run_command":{
+               "command":"function sorter/wheat_seeds"
+            }
+         },
+         "vatonage:fill":{
+            "sequence":[
+               {
+                  "condition":"query.get_equipped_item_name == 'amethyst_shard'",
+                  "set_block_property":{
+                     "vatonage:store1":1
+                  },
+                  "run_command":{
+                     "command":"tell @p amethyst_shard Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'ancient_debris'",
+                  "set_block_property":{
+                     "vatonage:store1":2
+                  },
+                  "run_command":{
+                     "command":"tell @p ancient_debris Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'arrow'",
+                  "set_block_property":{
+                     "vatonage:store1":3
+                  },
+                  "run_command":{
+                     "command":"tell @p arrow Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'bamboo'",
+                  "set_block_property":{
+                     "vatonage:store1":4
+                  },
+                  "run_command":{
+                     "command":"tell @p bamboo Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'blaze_rod'",
+                  "set_block_property":{
+                     "vatonage:store1":5
+                  },
+                  "run_command":{
+                     "command":"tell @p blaze_rod Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'bone'",
+                  "set_block_property":{
+                     "vatonage:store1":6
+                  },
+                  "run_command":{
+                     "command":"tell @p bone Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'carrot'",
+                  "set_block_property":{
+                     "vatonage:store1":7
+                  },
+                  "run_command":{
+                     "command":"tell @p carrot Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'clay_ball'",
+                  "set_block_property":{
+                     "vatonage:store1":8
+                  },
+                  "run_command":{
+                     "command":"tell @p clay_ball Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'clay_block'",
+                  "set_block_property":{
+                     "vatonage:store1":9
+                  },
+                  "run_command":{
+                     "command":"tell @p clay_block Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'coal'",
+                  "set_block_property":{
+                     "vatonage:store1":10
+                  },
+                  "run_command":{
+                     "command":"tell @p coal Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'coal_ore'",
+                  "set_block_property":{
+                     "vatonage:store1":11
+                  },
+                  "run_command":{
+                     "command":"tell @p coal_ore Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'copper_ingot'",
+                  "set_block_property":{
+                     "vatonage:store1":13
+                  },
+                  "run_command":{
+                     "command":"tell @p copper_ingot Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'copper_ore'",
+                  "set_block_property":{
+                     "vatonage:store1":14
+                  },
+                  "run_command":{
+                     "command":"tell @p copper_ore Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'deepslate'",
+                  "set_block_property":{
+                     "vatonage:store1":15
+                  },
+                  "run_command":{
+                     "command":"tell @p deepslate Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'diamond'",
+                  "set_block_property":{
+                     "vatonage:store2":1
+                  },
+                  "run_command":{
+                     "command":"tell @p diamond Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'diamond_nugget'",
+                  "set_block_property":{
+                     "vatonage:store2":2
+                  },
+                  "run_command":{
+                     "command":"tell @p diamond_nugget Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'diamond_ore'",
+                  "set_block_property":{
+                     "vatonage:store2":3
+                  },
+                  "run_command":{
+                     "command":"tell @p diamond_ore Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'dirt'",
+                  "set_block_property":{
+                     "vatonage:store2":4
+                  },
+                  "run_command":{
+                     "command":"tell @p dirt Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'emerald'",
+                  "set_block_property":{
+                     "vatonage:store2":5
+                  },
+                  "run_command":{
+                     "command":"tell @p emerald Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'emerald_nugget'",
+                  "set_block_property":{
+                     "vatonage:store2":6
+                  },
+                  "run_command":{
+                     "command":"tell @p emerald_nugget Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'emerald_ore'",
+                  "set_block_property":{
+                     "vatonage:store2":7
+                  },
+                  "run_command":{
+                     "command":"tell @p emerald_ore Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'ender_pearl'",
+                  "set_block_property":{
+                     "vatonage:store2":8
+                  },
+                  "run_command":{
+                     "command":"tell @p ender_pearl Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'end_stone'",
+                  "set_block_property":{
+                     "vatonage:store2":9
+                  },
+                  "run_command":{
+                     "command":"tell @p end_stone Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'experience_bottle'",
+                  "set_block_property":{
+                     "vatonage:store2":10
+                  },
+                  "run_command":{
+                     "command":"tell @p experience_bottle Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'feather'",
+                  "set_block_property":{
+                     "vatonage:store2":11
+                  },
+                  "run_command":{
+                     "command":"tell @p feather Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'glass'",
+                  "set_block_property":{
+                     "vatonage:store2":12
+                  },
+                  "run_command":{
+                     "command":"tell @p glass Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'glowstone_dust'",
+                  "set_block_property":{
+                     "vatonage:store2":13
+                  },
+                  "run_command":{
+                     "command":"tell @p glowstone_dust Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gold_ingot'",
+                  "set_block_property":{
+                     "vatonage:store2":14
+                  },
+                  "run_command":{
+                     "command":"tell @p gold_ingot Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gold_nugget'",
+                  "set_block_property":{
+                     "vatonage:store2":15
+                  },
+                  "run_command":{
+                     "command":"tell @p gold_nugget Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gold_ore'",
+                  "set_block_property":{
+                     "vatonage:store3":1
+                  },
+                  "run_command":{
+                     "command":"tell @p gold_ore Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gravel'",
+                  "set_block_property":{
+                     "vatonage:store3":2
+                  },
+                  "run_command":{
+                     "command":"tell @p gravel Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gunpowder'",
+                  "set_block_property":{
+                     "vatonage:store3":3
+                  },
+                  "run_command":{
+                     "command":"tell @p gunpowder Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'honeycomb'",
+                  "set_block_property":{
+                     "vatonage:store3":4
+                  },
+                  "run_command":{
+                     "command":"tell @p honeycomb Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'honey_bottle'",
+                  "set_block_property":{
+                     "vatonage:store3":5
+                  },
+                  "run_command":{
+                     "command":"tell @p honey_bottle Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'iron_ingot'",
+                  "set_block_property":{
+                     "vatonage:store3":6
+                  },
+                  "run_command":{
+                     "command":"tell @p iron_ingot Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'iron_nugget'",
+                  "set_block_property":{
+                     "vatonage:store3":7
+                  },
+                  "run_command":{
+                     "command":"tell @p iron_nugget Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'iron_ore'",
+                  "set_block_property":{
+                     "vatonage:store3":8
+                  },
+                  "run_command":{
+                     "command":"tell @p iron_ore Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'lapis'",
+                  "set_block_property":{
+                     "vatonage:store3":9
+                  },
+                  "run_command":{
+                     "command":"tell @p lapis_lazuli Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'lapis_ore'",
+                  "set_block_property":{
+                     "vatonage:store3":10
+                  },
+                  "run_command":{
+                     "command":"tell @p lapis_ore Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'leather'",
+                  "set_block_property":{
+                     "vatonage:store3":11
+                  },
+                  "run_command":{
+                     "command":"tell @p leather Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'netherite_ingot'",
+                  "set_block_property":{
+                     "vatonage:store3":12
+                  },
+                  "run_command":{
+                     "command":"tell @p netherite_ingot Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'netherite_scrap'",
+                  "set_block_property":{
+                     "vatonage:store3":13
+                  },
+                  "run_command":{
+                     "command":"tell @p netherite_scrap Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'netherrack'",
+                  "set_block_property":{
+                     "vatonage:store3":14
+                  },
+                  "run_command":{
+                     "command":"tell @p netherrack Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'nether_quartz'",
+                  "set_block_property":{
+                     "vatonage:store3":15
+                  },
+                  "run_command":{
+                     "command":"tell @p quartz Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'oak_log'",
+                  "set_block_property":{
+                     "vatonage:store4":1
+                  },
+                  "run_command":{
+                     "command":"tell @p log Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'oak_planks'",
+                  "set_block_property":{
+                     "vatonage:store4":2
+                  },
+                  "run_command":{
+                     "command":"tell @p planks Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'obsidian'",
+                  "set_block_property":{
+                     "vatonage:store4":3
+                  },
+                  "run_command":{
+                     "command":"tell @p obsidian Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'potato'",
+                  "set_block_property":{
+                     "vatonage:store4":4
+                  },
+                  "run_command":{
+                     "command":"tell @p potato Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'quartz_block'",
+                  "set_block_property":{
+                     "vatonage:store4":5
+                  },
+                  "run_command":{
+                     "command":"tell @p quartz_block Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'raw_copper'",
+                  "set_block_property":{
+                     "vatonage:store4":6
+                  },
+                  "run_command":{
+                     "command":"tell @p raw_copper Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'raw_gold'",
+                  "set_block_property":{
+                     "vatonage:store4":7
+                  },
+                  "run_command":{
+                     "command":"tell @p raw_gold Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'raw_iron'",
+                  "set_block_property":{
+                     "vatonage:store4":8
+                  },
+                  "run_command":{
+                     "command":"tell @p raw_iron Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'redstone'",
+                  "set_block_property":{
+                     "vatonage:store4":9
+                  },
+                  "run_command":{
+                     "command":"tell @p redstone Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'redstone_ore'",
+                  "set_block_property":{
+                     "vatonage:store4":10
+                  },
+                  "run_command":{
+                     "command":"tell @p redstone_ore Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'rotten_flesh'",
+                  "set_block_property":{
+                     "vatonage:store4":11
+                  },
+                  "run_command":{
+                     "command":"tell @p rotten_flesh Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'sand'",
+                  "set_block_property":{
+                     "vatonage:store4":12
+                  },
+                  "run_command":{
+                     "command":"tell @p sand Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'scute'",
+                  "set_block_property":{
+                     "vatonage:store4":13
+                  },
+                  "run_command":{
+                     "command":"tell @p scute Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'soul_sand'",
+                  "set_block_property":{
+                     "vatonage:store4":14
+                  },
+                  "run_command":{
+                     "command":"tell @p soul_sand Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'cobblestone'",
+                  "set_block_property":{
+                     "vatonage:store4":15
+                  },
+                  "run_command":{
+                     "command":"tell @p cobblestone Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'string'",
+                  "set_block_property":{
+                     "vatonage:store5":1
+                  },
+                  "run_command":{
+                     "command":"tell @p string Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'sugar_cane'",
+                  "set_block_property":{
+                     "vatonage:store5":2
+                  },
+                  "run_command":{
+                     "command":"tell @p sugar_cane Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'wheat'",
+                  "set_block_property":{
+                     "vatonage:store5":3
+                  },
+                  "run_command":{
+                     "command":"tell @p wheat Added"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'wheat_seeds'",
+                  "set_block_property":{
+                     "vatonage:store5":4
+                  },
+                  "run_command":{
+                     "command":"tell @p wheat_seeds Added"
+                  }
+               }
+            ]
+         }
+      },
+      "permutations":[
+         {
+            "condition":"query.block_property('vatonage:store1') == 1",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:amethyst_shard",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 2",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:ancient_debris",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 3",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:arrow",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 4",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:bamboo",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 5",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:blaze_rod",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 6",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:bone",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 7",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:carrot",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 8",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:clay_ball",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 9",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:clay_block",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 10",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:coal",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 11",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:coal_ore",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 12",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:cobblestone",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 13",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:copper_ingot",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 14",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:copper_ore",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store1') == 15",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:deepslate",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 1",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:diamond",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 2",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:diamond_nugget",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 3",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:diamond_ore",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 4",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:dirt",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 5",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:emerald",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 6",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:emerald_nugget",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 7",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:emerald_ore",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 8",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:ender_pearl",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 9",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:end_stone",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 10",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:experience_bottle",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 11",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:feather",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 12",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:glass",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 13",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:glowstone_dust",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 14",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:gold_ingot",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store2') == 15",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:gold_nugget",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 1",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:gold_ore",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 2",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:gravel",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 3",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:gunpowder",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 4",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:honeycomb",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 5",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:honey_bottle",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 6",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:iron_ingot",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 7",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:iron_nugget",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 8",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:iron_ore",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 9",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:lapis",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 10",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:lapis_ore",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 11",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:leather",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 12",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:netherite_ingot",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 13",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:netherite_scrap",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 14",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:netherrack",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store3') == 15",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:nether_quartz",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 1",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:oak_log",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 2",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:oak_planks",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 3",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:obsidian",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 4",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:potato",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 5",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:quartz_block",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 6",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:raw_copper",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 7",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:raw_gold",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 8",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:raw_iron",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 9",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:redstone",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 10",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:redstone_ore",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 11",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:rotten_flesh",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 12",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:sand",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 13",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:scute",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 14",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:soul_sand",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store4') == 15",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:cobblestone",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store5') == 1",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:string",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store5') == 2",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:sugar_cane",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store5') == 3",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:wheat",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:store5') == 4",
+            "components":{
+               "minecraft:ticking":{
+                  "looping":true,
+                  "range":[
+                     0.3,
+                     0.3
+                  ],
+                  "on_tick":{
+                     "event":"vatonage:wheat_seeds",
+                     "target":"self"
+                  }
+               }
+            }
+         }
+      ]
+   }
+}

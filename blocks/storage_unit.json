@@ -1,0 +1,622 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:block":{
+      "description":{
+         "identifier":"vatonage:storage_unit",
+         "register_to_creative_menu":true
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"storage_unit",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin":[
+               -8,
+               0,
+               -8
+            ],
+            "size":[
+               16,
+               16,
+               16
+            ]
+         },
+         "minecraft:loot": "loot_tables/blocks/storage_unit.json",
+         "minecraft:geometry":"geometry.storage_unit",
+         "minecraft:destroy_time":1,
+         "minecraft:block_light_absorption":0,
+         "minecraft:on_interact":{
+            "event":"vatonage:fill"
+         },
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 0.2, 0.2 ],
+            "on_tick": {
+               "event": "vatonage:generate",
+               "target": "self"
+            }
+         }
+      },
+      "events":{
+         "vatonage:fill":{
+            "sequence":[
+               {
+                  "condition":"query.get_equipped_item_name == 'amethyst_shard'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/amethyst_shard.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'ancient_debris'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/ancient_debris.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'arrow'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/arrow.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'bamboo'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/bamboo.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'blaze_rod'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/blaze_rod.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'bone'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/bone.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'carrot'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/carrot.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'clay_ball'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/clay_ball.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'clay_block'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/clay_block.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'coal'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/coal.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'coal_ore'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/coal_ore.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'cobblestone'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/cobblestone.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'copper_ingot'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/copper_ingot.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'copper_ore'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/copper_ore.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'deepslate'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/deepslate.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'diamond'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/diamond.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'diamond_nugget'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/diamond_nugget.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'diamond_ore'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/diamond_ore.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'dirt'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/dirt.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'emerald'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/emerald.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'emerald_nugget'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/emerald_nugget.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'emerald_ore'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/emerald_ore.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'ender_pearl'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/ender_pearl.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'end_stone'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/end_stone.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'feather'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/feather.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'glass'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/glass.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'glowstone_dust'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/glowstone_dust.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gold_ingot'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/gold_ingot.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gold_nugget'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/gold_nugget.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gold_ore'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/gold_ore.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gravel'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/gravel.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'gunpowder'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/gunpowder.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'honeycomb'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/honeycomb.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'honey_bottle'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/honey_bottle.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'iron_ingot'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/iron_ingot.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'iron_nugget'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/iron_nugget.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'iron_ore'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/iron_ore.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'lapis_lazuli'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/lapis_lazuli.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'lapis_ore'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/lapis_ore.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'leather'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/leather.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'log'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/log.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'netherite_ingot'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/netherite_ingot.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'netherite_scrap'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/netherite_scrap.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'netherrack'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/netherrack.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'obsidian'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/obsidian.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'planks'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/planks.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'potato'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/potato.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'quartz'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/quartz.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'quartz_block'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/quartz_block.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'raw_copper'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/raw_copper.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'raw_gold'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/raw_gold.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'raw_iron'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/raw_iron.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'redstone'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/redstone.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'redstone_ore'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/redstone_ore.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'rotten_flesh'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/rotten_flesh.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'sand'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/sand.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'scute'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/scute.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'soul_sand'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/soul_sand.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'spider_eye'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/spider_eye.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'string'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/string.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'sugar_cane'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/sugar_cane.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'wheat'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/wheat.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'wheat_seeds'",
+                  "spawn_loot":{
+                     "table":"loot_tables/storage_unit/wheat_seeds.json"
+                  },
+                  "run_command":{
+                     "command":"summon vatonage:activate_storage_unit"
+                  }
+               }
+            ]
+         },
+         "vatonage:generate": {
+            "run_command": {
+               "command": "function auto_storage_unit"
+            }
+         }
+      }
+   }
+}

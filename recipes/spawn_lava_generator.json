@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_lava_generator"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "ADA",
+      "BCB",
+      "ADA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:copper_ingot"
+      },
+      "B": {
+        "item": "minecraft:glass"
+      },
+      "C": {
+        "item": "minecraft:lava_bucket"
+      },
+      "D": {
+        "item": "minecraft:redstone_block"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_lava_generator"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+tp @e[type=item,r=1,name="end stone"] ~ ~-1.6 ~

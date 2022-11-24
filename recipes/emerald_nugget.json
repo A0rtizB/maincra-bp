@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:emerald_nugget"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:emerald"
+      }
+    },
+    "result": {
+      "item": "vatonage:emerald_nugget",
+      "count": 9
+    }
+  }
+}

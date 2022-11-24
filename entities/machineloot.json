@@ -1,0 +1,284 @@
+{
+   "format_version":"1.8.0",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"vatonage:machineloot",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false
+      },
+      "component_groups":{
+         "vatonage:sievedirt":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/sievedirtloot.json"
+            }
+         },
+         "vatonage:sievesoulsand":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/sievesoulsandloot.json"
+            }
+         },
+         "vatonage:sievesand":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/sievesandloot.json"
+            }
+         },
+         "vatonage:sievegravel":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/sievegravelloot.json"
+            }
+         },
+         "vatonage:waterbucket":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/waterbucketloot.json"
+            }
+         },
+         "vatonage:lavabucket":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/lavabucketloot.json"
+            }
+         },
+         "vatonage:voidloot":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/voidloot.json"
+            }
+         },
+         "vatonage:bucket":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/returnbucket.json"
+            }
+         },
+         "vatonage:emerald":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/emeraldloot.json"
+            }
+         },
+         "vatonage:diamond":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/diamondloot.json"
+            }
+         },
+         "vatonage:redstone":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/redstoneloot.json"
+            }
+         },
+         "vatonage:lapis":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/lapisloot.json"
+            }
+         },
+         "vatonage:copper":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/copperloot.json"
+            }
+         },
+         "vatonage:coal":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/coalloot.json"
+            }
+         },
+         "vatonage:gold":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/goldloot.json"
+            }
+         },
+         "vatonage:iron":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/ironloot.json"
+            }
+         },
+         "vatonage:cobblestone":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/cobbleloot.json"
+            }
+         },
+         "vatonage:gravel":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/gravelloot.json"
+            }
+         },
+         "vatonage:sand":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/sandloot.json"
+            }
+         },
+         "vatonage:fisher":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/fisherloot.json"
+            }
+         },
+         "vatonage:soulsand":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/soulsandloot.json"
+            }
+         },
+         "vatonage:netherrack":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/netherrackloot.json"
+            }
+         }
+      },
+      "events":{
+         "vatonage:cobblestone":{
+            "add":{
+               "component_groups":[
+                  "vatonage:cobblestone"
+               ]
+            }
+         },
+         "vatonage:gravel":{
+            "add":{
+               "component_groups":[
+                  "vatonage:gravel"
+               ]
+            }
+         },
+         "vatonage:sand":{
+            "add":{
+               "component_groups":[
+                  "vatonage:sand"
+               ]
+            }
+         },
+         "vatonage:fisher":{
+            "add":{
+               "component_groups":[
+                  "vatonage:fisher"
+               ]
+            }
+         },
+         "vatonage:soulsand":{
+            "add":{
+               "component_groups":[
+                  "vatonage:soulsand"
+               ]
+            }
+         },
+         "vatonage:netherrack":{
+            "add":{
+               "component_groups":[
+                  "vatonage:netherrack"
+               ]
+            }
+         },
+         "vatonage:emerald":{
+            "add":{
+               "component_groups":[
+                  "vatonage:emerald"
+               ]
+            }
+         },
+         "vatonage:diamond":{
+            "add":{
+               "component_groups":[
+                  "vatonage:diamond"
+               ]
+            }
+         },
+         "vatonage:redstone":{
+            "add":{
+               "component_groups":[
+                  "vatonage:redstone"
+               ]
+            }
+         },
+         "vatonage:lapis":{
+            "add":{
+               "component_groups":[
+                  "vatonage:lapis"
+               ]
+            }
+         },
+         "vatonage:copper":{
+            "add":{
+               "component_groups":[
+                  "vatonage:copper"
+               ]
+            }
+         },
+         "vatonage:coal":{
+            "add":{
+               "component_groups":[
+                  "vatonage:coal"
+               ]
+            }
+         },
+         "vatonage:gold":{
+            "add":{
+               "component_groups":[
+                  "vatonage:gold"
+               ]
+            }
+         },
+         "vatonage:iron":{
+            "add":{
+               "component_groups":[
+                  "vatonage:iron"
+               ]
+            }
+         },
+         "vatonage:voidloot":{
+            "add":{
+               "component_groups":[
+                  "vatonage:voidloot"
+               ]
+            }
+         },
+         "vatonage:bucket":{
+            "add":{
+               "component_groups":[
+                  "vatonage:bucket"
+               ]
+            }
+         },
+         "vatonage:waterbucket":{
+            "add":{
+               "component_groups":[
+                  "vatonage:waterbucket"
+               ]
+            }
+         },
+         "vatonage:lavabucket":{
+            "add":{
+               "component_groups":[
+                  "vatonage:lavabucket"
+               ]
+            }
+         },
+         "vatonage:sievedirt":{
+            "add":{
+               "component_groups":[
+                  "vatonage:sievedirt"
+               ]
+            }
+         },
+         "vatonage:sievesoulsand":{
+            "add":{
+               "component_groups":[
+                  "vatonage:sievesoulsand"
+               ]
+            }
+         },
+         "vatonage:sievegravel":{
+            "add":{
+               "component_groups":[
+                  "vatonage:sievegravel"
+               ]
+            }
+         },
+         "vatonage:sievesand":{
+            "add":{
+               "component_groups":[
+                  "vatonage:sievesand"
+               ]
+            }
+         }
+      },
+      "components":{
+         "minecraft:scale":{
+            "value":0
+         }
+      }
+   }
+}

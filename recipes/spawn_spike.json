@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_spike"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " A ",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_spike"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+tp @e[type=item,r=1,name="copper ore"] ~ ~-1.6 ~

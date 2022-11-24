@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_sorter"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "B",
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:redstone"
+      },
+      "B": {
+        "item": "minecraft:hopper"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_sorter"
+    }
+  }
+}

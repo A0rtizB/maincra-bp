@@ -1,0 +1,42 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "vatonage:wooden_barrel1",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "wooden_barrel1",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry": "geometry.wooden_barrel",
+         "minecraft:loot": "loot_tables/blocks/barrel.json",
+         "minecraft:destroy_time": 1,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 60, 120 ],
+            "on_tick": {
+               "event": "vatonage:fill",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "vatonage:fill": {
+            "set_block": {
+               "block_type": "vatonage:wooden_barrel2"
+            },
+            "decrement_stack": {
+            }
+         }
+      }
+   }
+}

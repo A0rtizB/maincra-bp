@@ -1,0 +1,1 @@
+tp @e[type=item,r=1,name="obsidian"] ~ ~-1.6 ~

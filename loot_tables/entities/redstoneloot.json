@@ -1,0 +1,14 @@
+{
+    "pools": [
+        {
+            "rolls": 12,
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 1,
+                    "name": "minecraft:redstone"
+                }
+            ]
+        }
+    ]
+}

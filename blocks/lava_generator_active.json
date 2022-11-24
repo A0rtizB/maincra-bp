@@ -1,0 +1,44 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "vatonage:lava_generator_active",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "lava_generator_active",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry": "geometry.lava_generator",
+         "minecraft:destroy_time": 1,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:loot": "loot_tables/blocks/lava_generator.json",
+         "minecraft:block_light_emission": 0.8,
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 20, 20 ],
+            "on_tick": {
+               "event": "vatonage:generate",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "vatonage:generate": {
+            "set_block": {
+               "block_type": "vatonage:lava_generator_half"
+            },
+            "run_command": {
+               "command": "summon vatonage:activate_lava"
+            }
+         }
+      }
+   }
+}

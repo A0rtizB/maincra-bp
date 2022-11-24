@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_enderegggenerator"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CAC",
+      "CDC",
+      "BBB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:ender_eye"
+      },
+      "B": {
+        "item": "minecraft:copper_block"
+      },
+      "C": {
+        "item": "minecraft:gold_block"
+      },
+      "D": {
+        "item": "minecraft:diamond_block"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_enderegggenerator"
+    }
+  }
+}

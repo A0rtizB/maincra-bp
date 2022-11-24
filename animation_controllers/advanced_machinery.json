@@ -1,0 +1,485 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.hammer": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function hammer" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function hammer" ]
+        }
+      }
+    },
+    "controller.animation.activate_storage_unit": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_storage_unit" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_storage_unit" ]
+        }
+      }
+    },
+    "controller.animation.activate_block_breaker1": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_block_breaker1" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_block_breaker1" ]
+        }
+      }
+    },
+    "controller.animation.activate_block_breaker2": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_block_breaker2" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_block_breaker2" ]
+        }
+      }
+    },
+    "controller.animation.activate_block_breaker3": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_block_breaker3" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_block_breaker3" ]
+        }
+      }
+    },
+    "controller.animation.activate_block_breaker4": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_block_breaker4" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_block_breaker4" ]
+        }
+      }
+    },
+    "controller.animation.activate_sieve_soulsand": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_sieve_soulsand" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_sieve_soulsand" ]
+        }
+      }
+    },
+    "controller.animation.activate_sieve_gravel": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_sieve_gravel" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_sieve_gravel" ]
+        }
+      }
+    },
+    "controller.animation.activate_sieve_sand": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_sieve_sand" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_sieve_sand" ]
+        }
+      }
+    },
+    "controller.animation.activate_sieve_dirt": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_sieve_dirt" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_sieve_dirt" ]
+        }
+      }
+    },
+    "controller.animation.activate_advanced_solar": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_advanced_solar" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_advanced_solar" ]
+        }
+      }
+    },
+    "controller.animation.activate_void_miner": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_void_miner" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_void_miner" ]
+        }
+      }
+    },
+    "controller.animation.activate_water_wheel": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_water_wheel" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_water_wheel" ]
+        }
+      }
+    },
+    "controller.animation.activate_steam": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_steam" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_steam" ]
+        }
+      }
+    },
+    "controller.animation.activate_mechanical_emerald": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_emerald" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_emerald" ]
+        }
+      }
+    },
+    "controller.animation.activate_mechanical_iron": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_iron" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_iron" ]
+        }
+      }
+    },
+    "controller.animation.activate_mechanical_gold": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_gold" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_gold" ]
+        }
+      }
+    },
+    "controller.animation.activate_mechanical_coal": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_coal" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_coal" ]
+        }
+      }
+    },
+    "controller.animation.activate_mechanical_copper": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_copper" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_copper" ]
+        }
+      }
+    },
+    "controller.animation.activate_mechanical_diamond": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_diamond" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_diamond" ]
+        }
+      }
+    },
+    "controller.animation.activate_mechanical_lapis": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_lapis" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_lapis" ]
+        }
+      }
+    },
+    "controller.animation.activate_mechanical_coal": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_coal" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_coal" ]
+        }
+      }
+    },
+    "controller.animation.activate_mechanical_redstone": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_redstone" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mechanical_redstone" ]
+        }
+      }
+    },
+    "controller.animation.activate_converter_sand": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_converter_sand" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_converter_sand" ]
+        }
+      }
+    },
+    "controller.animation.activate_converter_cobblestone": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_converter_cobblestone" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_converter_cobblestone" ]
+        }
+      }
+    },
+    "controller.animation.activate_lava": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_lava" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_lava" ]
+        }
+      }
+    },
+    "controller.animation.activate_nether_spawner": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_nether_spawner" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_nether_spawner" ]
+        }
+      }
+    },
+    "controller.animation.activate_passive_spawner": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_passive_spawner" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_passive_spawner" ]
+        }
+      }
+    },
+    "controller.animation.activate_hostile_spawner": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_hostile_spawner" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_hostile_spawner" ]
+        }
+      }
+    },
+    "controller.animation.activate_fisher": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_fisher" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_fisher" ]
+        }
+      }
+    },
+    "controller.animation.activate_combustion": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_combustion" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_combustion" ]
+        }
+      }
+    },
+    "controller.animation.activate_egggen": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_egggen" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_egggen" ]
+        }
+      }
+    },
+    "controller.animation.activate_crusher_cobblestone": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_crusher_cobblestone" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_crusher_cobblestone" ]
+        }
+      }
+    },
+    "controller.animation.activate_crusher_gravel": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_crusher_gravel" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_crusher_gravel" ]
+        }
+      }
+    },
+    "controller.animation.activate_cobblestone_generator": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_cobblestone_generator" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_cobblestone_generator" ]
+        }
+      }
+    },
+    "controller.animation.activate_solar": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_solar" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_solar" ]
+        }
+      }
+    },
+    "controller.animation.activate_vacuum_hopper": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_vacuum_hopper" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_vacuum_hopper" ]
+        }
+      }
+    },
+    "controller.animation.activate_auto_farmer": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_auto_farmer" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_auto_farmer" ]
+        }
+      }
+    },
+    "controller.animation.activate_bio": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_bio" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_bio" ]
+        }
+      }
+    },
+    "controller.animation.activate_chopper": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_chopper" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_chopper" ]
+        }
+      }
+    }
+  }
+}

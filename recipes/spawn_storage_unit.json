@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_storage_unit"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BAB",
+      "BCB",
+      "BBB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:iron_block"
+      },
+      "B": {
+        "item": "minecraft:iron_ingot"
+      },
+      "C": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_storage_unit"
+    }
+  }
+}

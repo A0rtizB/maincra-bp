@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_fisher"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BCB",
+      "CAC",
+      "B B"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:fishing_rod"
+      },
+      "B": {
+        "item": "minecraft:iron_block"
+      },
+      "C": {
+        "item": "minecraft:redstone_block"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_fisher"
+    }
+  }
+}

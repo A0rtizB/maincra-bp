@@ -1,0 +1,150 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"vatonage:block_breaker",
+         "properties":{
+            "vatonage:face":[
+               2,
+               3,
+               4,
+               5
+            ]
+         }
+      },
+      "components":{
+         "minecraft:creative_category": {
+		"category": "construction"
+	},
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"vblock_breaker",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry":"geometry.vblock_breaker",
+         "minecraft:destroy_time":1.0,
+         "minecraft:on_player_placing":{
+            "event":"vatonage:place"
+         },
+         "minecraft:block_light_absorption":0
+      },
+      "events":{
+         "vatonage:place":{
+            "set_block_property":{
+               "vatonage:face":"(query.cardinal_facing_2d)"
+            }
+         },
+         "vatonage:generate1":{
+            "run_command":{
+               "command":"summon vatonage:activate_block_breaker1"
+            }
+         },
+         "vatonage:generate2":{
+            "run_command":{
+               "command":"summon vatonage:activate_block_breaker2"
+            }
+         },
+         "vatonage:generate3":{
+            "run_command":{
+               "command":"summon vatonage:activate_block_breaker3"
+            }
+         },
+         "vatonage:generate4":{
+            "run_command":{
+               "command":"summon vatonage:activate_block_breaker4"
+            }
+         }
+      },
+      "permutations":[
+         {
+            "condition":"query.block_property('vatonage:face') == 2",
+            "components":{
+               "minecraft:rotation":[
+                  0,
+                  180,
+                  0
+               ],
+         "minecraft:ticking":{
+            "looping":true,
+            "range":[
+               1,
+               1
+            ],
+            "on_tick":{
+               "event":"vatonage:generate1",
+               "target":"self"
+            }
+         }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:face') == 3",
+            "components":{
+               "minecraft:rotation":[
+                  0,
+                  0,
+                  0
+               ],
+         "minecraft:ticking":{
+            "looping":true,
+            "range":[
+               1,
+               1
+            ],
+            "on_tick":{
+               "event":"vatonage:generate2",
+               "target":"self"
+            }
+         }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:face') == 4",
+            "components":{
+               "minecraft:rotation":[
+                  0,
+                  270,
+                  0
+               ],
+         "minecraft:ticking":{
+            "looping":true,
+            "range":[
+               1,
+               1
+            ],
+            "on_tick":{
+               "event":"vatonage:generate3",
+               "target":"self"
+            }
+         }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:face') == 5",
+            "components":{
+               "minecraft:rotation":[
+                  0,
+                  90,
+                  0
+               ],
+         "minecraft:ticking":{
+            "looping":true,
+            "range":[
+               1,
+               1
+            ],
+            "on_tick":{
+               "event":"vatonage:generate4",
+               "target":"self"
+            }
+         }
+            }
+         }
+      ]
+   }
+}

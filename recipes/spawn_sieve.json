@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_sieve"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "AAA",
+      "B B",
+      "B B"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:planks"
+      },
+      "B": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_sieve"
+    }
+  }
+}

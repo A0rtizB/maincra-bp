@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_power_core"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "ACA",
+      "CBC",
+      "ACA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:iron_ingot"
+      },
+      "B": {
+        "item": "minecraft:diamond"
+      },
+      "C": {
+        "item": "minecraft:redstone_block"
+      }
+    },
+    "result": {
+      "item": "vatonage:power_core_spawn_egg"
+    }
+  }
+}

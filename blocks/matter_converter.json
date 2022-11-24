@@ -1,0 +1,64 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "vatonage:matter_converter",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "matter_converter",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry": "geometry.matter_converter",
+         "minecraft:destroy_time": 1,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:on_interact":{
+            "event":"vatonage:fill"
+         },
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 0.4, 0.4 ],
+            "on_tick": {
+               "event": "vatonage:generate",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "vatonage:fill":{
+            "sequence":[
+               {
+                  "condition":"query.get_equipped_item_name == 'cobblestone'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_converter_cobblestone"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'sand'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_converter_sand"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               }
+            ]
+         },
+         "vatonage:generate": {
+            "run_command": {
+               "command": "function auto_converter"
+            }
+         }
+      }
+   }
+}

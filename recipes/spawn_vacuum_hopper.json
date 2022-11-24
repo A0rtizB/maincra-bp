@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_vacuum_hopper"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BBB",
+      "BAB",
+      "BBB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:ender_eye"
+      },
+      "B": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_vacuum_hopper"
+    }
+  }
+}

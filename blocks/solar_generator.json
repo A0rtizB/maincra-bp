@@ -1,0 +1,43 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "vatonage:solar_generator",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "solar_generator",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 8, 16]
+         },
+         "minecraft:entity_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 8, 16]
+         },
+         "minecraft:geometry": "geometry.solar_generator",
+         "minecraft:destroy_time": 1,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 25, 25 ],
+            "on_tick": {
+               "event": "vatonage:generate",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "vatonage:generate": {
+            "run_command": {
+               "command": "summon vatonage:activate_solar"
+            }
+         }
+      }
+   }
+}

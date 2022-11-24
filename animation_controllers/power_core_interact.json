@@ -1,0 +1,61 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.power_core_interact": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "interact_event": "query.skin_id == 1"
+            }
+          ]
+        },
+        "interact_event": {
+          "transitions": [
+            {
+              "default": "query.skin_id != 1"
+            }
+          ],
+          "on_entry": [
+            "/function check_power",
+            "@s vatonage:clear"
+          ]
+        }
+      }
+    },
+    "controller.animation.power_core_interact2": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "interact_event": "query.skin_id == 2"
+            }
+          ]
+        },
+        "interact_event": {
+          "transitions": [
+            {
+              "default": "query.skin_id != 2"
+            }
+          ],
+          "on_entry": [
+            "/give @p vatonage:power_core_spawn_egg",
+            "/kill @s"
+          ]
+        }
+      }
+    },
+    "controller.animation.power_core": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function power_core" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function power_core" ]
+        }
+      }
+    }
+  }
+}

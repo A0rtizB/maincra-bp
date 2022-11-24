@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_chopper"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BDB",
+      "ABA",
+      "BDB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:diamond_axe"
+      },
+      "B": {
+        "item": "minecraft:iron_block"
+      },
+      "C": {
+        "item": "minecraft:redstone_block"
+      },
+      "D": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_chopper"
+    }
+  }
+}

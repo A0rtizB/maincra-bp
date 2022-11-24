@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_void_miner"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BBB",
+      "ACA",
+      "ACA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:iron_block"
+      },
+      "B": {
+        "item": "minecraft:redstone_block"
+      },
+      "C": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_void_miner"
+    }
+  }
+}

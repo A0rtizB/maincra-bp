@@ -1,0 +1,44 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "vatonage:bio_active",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "bio",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry": "geometry.bio",
+         "minecraft:destroy_time": 1,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:loot": "loot_tables/blocks/bio.json",
+         "minecraft:block_light_emission": 0.5,
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 30, 30 ],
+            "on_tick": {
+               "event": "vatonage:generate",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "vatonage:generate": {
+            "set_block": {
+               "block_type": "vatonage:bio"
+            },
+            "run_command": {
+               "command": "summon vatonage:activate_bio"
+            }
+         }
+      }
+   }
+}

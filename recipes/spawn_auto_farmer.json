@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_auto_farmer"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CCC",
+      "BAB",
+      "CCC"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:redstone_block"
+      },
+      "B": {
+        "item": "minecraft:diamond_hoe"
+      },
+      "C": {
+        "item": "minecraft:iron_block"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_auto_farmer"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_hostile_spawner"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BAB",
+      "ACA",
+      "BAB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:emerald"
+      },
+      "B": {
+        "item": "minecraft:iron_block"
+      },
+      "C": {
+        "item": "minecraft:diamond_block"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_hostile_spawner"
+    }
+  }
+}

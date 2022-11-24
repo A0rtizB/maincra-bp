@@ -1,0 +1,32 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"vatonage:spawn_auto_sieve"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"spawn_auto_sieve"
+         },
+  	"minecraft:render_offsets": {
+  		"main_hand": {
+	  		"third_person": {
+				"position": [0.26, 1.0, -0.55],
+	  			"scale": [0.012, 0.012, 0.012]
+	  		},
+	  		"first_person": {
+  				"position": [3.54, -0.8, -6.4],
+	  			"scale": [0.03, 0.03, 0.03]
+		  	}
+ 	  	}
+	},
+         "minecraft:display_name":{
+            "value":"Auto Sieve\n§430 RF/block"
+         },
+         "minecraft:block_placer": {
+           "block": "vatonage:auto_sieve"
+         }
+      }
+   }
+}

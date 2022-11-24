@@ -1,0 +1,311 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:block":{
+      "description":{
+         "identifier":"vatonage:sieve",
+         "properties":{
+            "vatonage:state":[
+               0,
+               1,
+               2,
+               3,
+               4,
+               5,
+               6,
+               7,
+               8,
+               9,
+               10,
+               11,
+               12
+            ]
+         }
+      },
+      "components":{
+         "minecraft:geometry":"geometry.sieve",
+         "minecraft:destroy_time":1,
+         "minecraft:explosion_resistance":1,
+         "minecraft:block_light_emission":0,
+         "minecraft:block_light_absorption":0,
+         "minecraft:on_interact":{
+            "event":"vatonage:fill0"
+         },
+         "minecraft:pick_collision":{
+            "origin":[
+               -8.0,
+               0.0,
+               -8.0
+            ],
+            "size":[
+               16.0,
+               16.0,
+               16.0
+            ]
+         },
+         "minecraft:loot":"loot_tables/blocks/dropsieve.json"
+      },
+      "permutations":[
+         {
+            "condition":"query.block_property('vatonage:state') == 0",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve0",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill0"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 1",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve1",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill1"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 2",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve2",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill1"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 3",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve3",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill2"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 4",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve4",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill1"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 5",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve5",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill1"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 6",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve6",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill3"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 7",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve7",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill1"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 8",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve8",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill1"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 9",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve9",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill4"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 10",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve10",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill1"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 11",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve11",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill1"
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('vatonage:state') == 12",
+            "components":{
+               "minecraft:material_instances":{
+                  "*":{
+                     "texture":"sieve12",
+                     "render_method":"alpha_test"
+                  }
+               },
+               "minecraft:on_interact":{
+                  "event":"vatonage:fill5"
+               }
+            }
+         }
+      ],
+      "events":{
+         "vatonage:fill0":{
+            "sequence":[
+               {
+                  "condition":"query.get_equipped_item_name == 'gravel'",
+                  "set_block_property":{
+                     "vatonage:state":"1"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'sand'",
+                  "set_block_property":{
+                     "vatonage:state":"4"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'dirt'",
+                  "set_block_property":{
+                     "vatonage:state":"7"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'soul_sand'",
+                  "set_block_property":{
+                     "vatonage:state":"10"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               }
+            ]
+         },
+         "vatonage:fill1":{
+            "set_block_property":{
+               "vatonage:state":"query.block_property('vatonage:state')+1"
+            }
+         },
+         "vatonage:fill2":{
+            "set_block_property":{
+               "vatonage:state":"0"
+            },
+            "run_command": {
+               "command": "summon vatonage:machineloot ~ ~0.5 ~ vatonage:sievegravel"
+            }
+         },
+         "vatonage:fill3":{
+            "set_block_property":{
+               "vatonage:state":"0"
+            },
+            "run_command": {
+               "command": "summon vatonage:machineloot ~ ~0.5 ~ vatonage:sievesand"
+            }
+         },
+         "vatonage:fill4":{
+            "set_block_property":{
+               "vatonage:state":"0"
+            },
+            "run_command": {
+               "command": "summon vatonage:machineloot ~ ~0.5 ~ vatonage:sievedirt"
+            }
+         },
+         "vatonage:fill5":{
+            "set_block_property":{
+               "vatonage:state":"0"
+            },
+            "run_command": {
+               "command": "summon vatonage:machineloot ~ ~0.5 ~ vatonage:sievesoulsand"
+            }
+         }
+      }
+   }
+}

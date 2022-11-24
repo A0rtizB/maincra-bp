@@ -1,0 +1,93 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:block":{
+      "description":{
+         "identifier":"vatonage:auto_sieve",
+         "register_to_creative_menu":true
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"auto_sieve",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin":[
+               -8,
+               0,
+               -8
+            ],
+            "size":[
+               16,
+               16,
+               16
+            ]
+         },
+         "minecraft:geometry":"geometry.sieve",
+         "minecraft:destroy_time":1,
+         "minecraft:block_light_absorption":0,
+         "minecraft:on_interact":{
+            "event":"vatonage:fill"
+         },
+         "minecraft:ticking":{
+            "looping":true,
+            "range":[
+               0.5,
+               0.5
+            ],
+            "on_tick":{
+               "event":"vatonage:generate",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "vatonage:fill":{
+            "sequence":[
+               {
+                  "condition":"query.get_equipped_item_name == 'gravel'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_sieve_gravel"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'sand'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_sieve_sand"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'dirt'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_sieve_dirt"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               },
+               {
+                  "condition":"query.get_equipped_item_name == 'soul_sand'",
+                  "run_command":{
+                     "command":"summon vatonage:activate_sieve_soulsand"
+                  },
+                  "decrement_stack":{
+                     
+                  }
+               }
+            ]
+         },
+         "vatonage:generate":{
+            "run_command":{
+               "command":"function auto_sieve"
+            }
+         }
+      }
+   }
+}

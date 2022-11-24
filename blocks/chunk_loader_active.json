@@ -1,0 +1,44 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "vatonage:chunk_loader_active",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "chunk_loader",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry": "geometry.chunk_loader",
+         "minecraft:loot": "loot_tables/blocks/chunk_loader.json",
+         "minecraft:destroy_time": 1,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:on_interact": {
+            "target": "other",
+            "event": "vatonage:fill"
+         },
+         "minecraft:on_player_destroyed": {
+            "event": "vatonage:fill2"
+         }
+      },
+      "events": {
+         "vatonage:fill": {
+            "run_command": {
+               "command": "function loaderoff"
+            }
+         },
+         "vatonage:fill2": {
+            "run_command": {
+               "command": "function loaderoff2"
+            }
+         }
+      }
+   }
+}

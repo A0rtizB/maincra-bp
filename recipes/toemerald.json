@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:toemerald"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:emerald_nugget"
+      }
+    },
+    "result": {
+      "item": "minecraft:emerald"
+    }
+  }
+}

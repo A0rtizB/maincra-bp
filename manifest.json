@@ -1,0 +1,30 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "Modpack BP",
+        "name": "Modpack BP",
+        "uuid": "b1c81581-e2a3-4ff3-bf2a-5960cb028979",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            8,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "description": "Modpack BP",
+            "type": "data",
+            "uuid": "8cd58bec-7f23-4bf9-abf9-1c73e5afca2e",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}

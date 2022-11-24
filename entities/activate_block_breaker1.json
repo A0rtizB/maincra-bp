@@ -1,0 +1,25 @@
+{
+   "format_version":"1.8.0",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"vatonage:activate_block_breaker1",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false,
+         "scripts":{
+            "animate":[
+               "walk"
+            ]
+         },
+         "animations":{
+            "walk":"controller.animation.activate_block_breaker1"
+         }
+      },
+      "components":{
+         "minecraft:scale":{
+            "value":0
+         },
+         "minecraft:instant_despawn":{}
+      }
+   }
+}

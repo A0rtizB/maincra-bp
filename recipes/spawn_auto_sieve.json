@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_auto_sieve"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "AAA",
+      "B B",
+      "B B"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:iron_block"
+      },
+      "B": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_auto_sieve"
+    }
+  }
+}

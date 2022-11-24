@@ -1,0 +1,46 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"vatonage:spawn_drying_rack"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"spawn_drying_rack"
+         },
+         "minecraft:display_name":{
+            "value":"Drying Rack"
+         },
+	"minecraft:render_offsets": {
+		"main_hand": {
+			"third_person": {
+				"position": [0.26, 1.0, -0.55],
+				"scale": [0.024, 0.024, 0.024]
+			},
+			"first_person": {
+				"position": [1.77, -0.4, -3.2],
+				"scale": [0.03, 0.03, 0.03]
+			}
+		}
+	},
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"used"
+            }
+         }
+      },
+      "events":{
+         "used":{
+            "swing":{
+               
+            },
+            "run_command":{
+               "command":[
+                  "function give_drying_rack"
+               ]
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,1 @@
+tp @e[type=item,r=1,name="seeds"] ~ ~-1.6 ~

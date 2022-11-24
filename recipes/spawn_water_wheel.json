@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_water_wheel"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CCC",
+      "CAC",
+      "DBD"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:water_bucket"
+      },
+      "B": {
+        "item": "minecraft:copper_block"
+      },
+      "C": {
+        "item": "minecraft:glass"
+      },
+      "D": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_water_wheel"
+    }
+  }
+}

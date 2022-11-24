@@ -1,0 +1,1 @@
+tp @e[type=item,r=1,name="iron nugget"] ~ ~-1.6 ~

@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:diamond_nugget"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "vatonage:diamond_nugget",
+      "count": 9
+    }
+  }
+}

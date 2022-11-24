@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_endcake"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "DDD",
+      "ACA",
+      "BBB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:blaze_rod"
+      },
+      "B": {
+        "item": "minecraft:nether_wart"
+      },
+      "C": {
+        "item": "minecraft:cake"
+      },
+      "D": {
+        "item": "minecraft:ender_eye"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_endcake"
+    }
+  }
+}

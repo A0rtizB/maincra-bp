@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_advanced_conveyor"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " B ",
+      "ACA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:iron_ingot"
+      },
+      "B": {
+        "item": "minecraft:redstone"
+      },
+      "C": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "vatonage:advancedconveyor",
+      "count": 6
+    }
+  }
+}

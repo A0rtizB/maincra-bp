@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_cobblestone_generator"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "AAA",
+      "BAC",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:cobblestone"
+      },
+      "B": {
+        "item": "minecraft:lava_bucket"
+      },
+      "C": {
+        "item": "minecraft:water_bucket"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_cobblestone_generator"
+    }
+  }
+}

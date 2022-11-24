@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:block_breaker"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CCC",
+      "BAB",
+      "CCC"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:redstone_block"
+      },
+      "B": {
+        "item": "minecraft:iron_pickaxe"
+      },
+      "C": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:block_breaker"
+    }
+  }
+}

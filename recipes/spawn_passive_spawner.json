@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:spawn_passive_spawner"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BAB",
+      "ACA",
+      "BAB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:dirt"
+      },
+      "B": {
+        "item": "minecraft:lapis_block"
+      },
+      "C": {
+        "item": "minecraft:diamond_block"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_passive_spawner"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "vatonage:spike",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "spike",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 8, 16]
+         },
+         "minecraft:entity_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 8, 16]
+         },
+         "minecraft:geometry": "geometry.spike",
+         "minecraft:destroy_time": 1,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 0.4, 0.4 ],
+            "on_tick": {
+               "event": "vatonage:generate",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "vatonage:generate": {
+            "run_command": {
+               "command": "execute @e[r=2] ~ ~ ~ detect ~ ~-0.4 ~ vatonage:spike 0 effect @s wither 1 2 true"
+            }
+         }
+      }
+   }
+}
