@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "vatonage:platinum_ingot"
+    },
+
+    
+    "tags": [ "alloy_smelter" ],
+    "ingredients": [
+      {
+        "item": "minecraft:gold_ingot"
+      },
+      {
+        "item": "vatonage:electrum_ingot"
+      },
+      {
+        "item": "minecraft:diamond"
+      }
+    ],
+    "result": {
+      "item": "vatonage:platinum_ingot"
+    }
+  }
+}

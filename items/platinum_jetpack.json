@@ -1,0 +1,59 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category":"equipment",
+         "identifier":"vatonage:platinum_jetpack"
+      },
+      "components":{
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":2,
+         "minecraft:hand_equipped":false,
+         "minecraft:durability":{
+            "max_durability":1000
+         },
+         "minecraft:repairable":{
+            "repair_items":[
+               {
+                  "repair_amount":500,
+                  "items":[
+                     "vatonage:platinum_ingot"
+                  ]
+               }
+            ]
+         },
+         "minecraft:cooldown":{
+            "category":"platinum_jetpack",
+            "duration":1
+         },
+         "minecraft:icon":{
+            "texture":"platinum_jetpack"
+         },
+         "minecraft:display_name":{
+            "value":"Platinum Jetpack"
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"used"
+            }
+         }
+      },
+      "events":{
+         "used":{
+            "swing":{
+            },
+            "run_command":{
+               "command":[
+                  "effect @s levitation 2 6 true",
+                  "effect @s slow_falling 4 0 true"
+               ]
+            },
+            "damage":{
+               "type":"magic",
+               "amount":1,
+               "target":"self"
+            }
+         }
+      }
+   }
+}

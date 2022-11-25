@@ -1,0 +1,32 @@
+{
+   "format_version":"1.8.0",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"vatonage:machineloot3",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false
+      },
+      "component_groups":{
+         "vatonage:fuel":{
+            "minecraft:loot": {
+              "table": "loot_tables/entities/fuelloot.json"
+            }
+         }
+      },
+      "events":{
+         "vatonage:fuel":{
+            "add":{
+               "component_groups":[
+                  "vatonage:fuel"
+               ]
+            }
+         }
+      },
+      "components":{
+         "minecraft:scale":{
+            "value":0
+         }
+      }
+   }
+}

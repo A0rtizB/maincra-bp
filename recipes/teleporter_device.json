@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:teleporter_device"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " B ",
+      "ACA",
+      " B "
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:vsteel_ingot"
+      },
+      "B": {
+        "item": "minecraft:diamond"
+      },
+      "C": {
+        "item": "vatonage:electrum_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:teleporter_device"
+    }
+  }
+}

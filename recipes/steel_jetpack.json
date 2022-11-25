@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:steel_jetpack"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "A A",
+      "AAA",
+      "ABA"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:vsteel_ingot"
+      },
+      "B": {
+        "item": "vatonage:fuel_pack"
+      }
+    },
+    "result": {
+      "item": "vatonage:steel_jetpack"
+    }
+  }
+}

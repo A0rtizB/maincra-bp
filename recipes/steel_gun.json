@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:steel_gun"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "AAA",
+      "A  "
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:vsteel_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:steel_gun"
+    }
+  }
+}

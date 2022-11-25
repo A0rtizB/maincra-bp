@@ -1,0 +1,53 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.activate_fuel_generator": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_fuel_generator" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_fuel_generator" ]
+        }
+      }
+    },
+    "controller.animation.activate_healing_beacon": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_healing_beacon" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_healing_beacon" ]
+        }
+      }
+    },
+    "controller.animation.activate_mobility_beacon": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_mobility_beacon" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_mobility_beacon" ]
+        }
+      }
+    },
+    "controller.animation.activate_saturation_beacon": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_saturation_beacon" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_saturation_beacon" ]
+        }
+      }
+    }
+  }
+}

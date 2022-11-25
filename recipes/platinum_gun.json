@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:platinum_gun"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "AAA",
+      "A  "
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:platinum_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:platinum_gun"
+    }
+  }
+}

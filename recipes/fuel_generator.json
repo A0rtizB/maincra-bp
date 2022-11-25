@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:fuel_generator"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "DDD",
+      "BAB",
+      "CCC"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:emerald"
+      },
+      "B": {
+        "item": "vatonage:vsteel_ingot"
+      },
+      "C": {
+        "item": "minecraft:iron_pickaxe"
+      },
+      "D": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:fuel_generator"
+    }
+  }
+}

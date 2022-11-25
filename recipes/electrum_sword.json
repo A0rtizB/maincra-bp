@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:electrum_sword"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "A",
+      "A",
+      "B"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:electrum_ingot"
+      },
+      "B": {
+        "item": "vatonage:vsteel_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:electrum_sword"
+    }
+  }
+}

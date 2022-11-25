@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:platinum_jetpack"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "A A",
+      "AAA",
+      "ABA"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:platinum_ingot"
+      },
+      "B": {
+        "item": "vatonage:fuel_pack"
+      }
+    },
+    "result": {
+      "item": "vatonage:platinum_jetpack"
+    }
+  }
+}
