@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:bonemealer"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CHC",
+      "BAB",
+      "CCC"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:redstone_block"
+      },
+      "B": {
+        "item": "minecraft:bone_block"
+      },
+      "C": {
+        "item": "minecraft:iron_block"
+      },
+      "H": {
+        "item": "minecraft:diamond_hoe"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_bonemealer"
+    }
+  }
+}

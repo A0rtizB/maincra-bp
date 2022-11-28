@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "loot_tables/matter_randomizer/worst.json",
+          "weight": 50
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/matter_randomizer/bad.json",
+          "weight": 40
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/matter_randomizer/better.json",
+          "weight": 25
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/matter_randomizer/best.json",
+          "weight": 10
+        }
+      ]
+    }
+  ]
+}

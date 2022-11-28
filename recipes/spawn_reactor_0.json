@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:spawn_reactor_0"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "IRI",
+      "RDR",
+      "IRI"
+    ],
+    "key": {
+      "I": {
+        "item": "amep:iron_circuit"
+      },
+      "R": {
+        "item": "minecraft:redstone_block"
+      },
+      "D": {
+        "item": "amep:diamond_gear"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_reactor_0"
+    }
+  }
+}

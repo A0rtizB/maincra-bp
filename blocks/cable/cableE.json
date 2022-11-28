@@ -1,0 +1,29 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"amep:cableE"
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"cable",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin": [ -8.5, 5, -3.5 ],
+            "size": [ 17, 7, 7 ]
+         },
+         "minecraft:entity_collision":{
+            "origin": [ -8.5, 5, -3.5 ],
+            "size": [ 17, 7, 7 ]
+         },
+         "minecraft:block_light_absorption": 0,
+         "minecraft:rotation":[ 0, 270, 0 ],
+         "minecraft:loot": "loot_tables/blocks/cable.json",
+         "minecraft:geometry":"geometry.cable",
+         "minecraft:destroy_time":0.5
+      }
+   }
+}

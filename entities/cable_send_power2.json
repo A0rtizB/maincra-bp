@@ -1,0 +1,85 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"amep:cable_send_power2",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false,
+         "scripts":{
+            "animate":[
+               "horizontal",
+               "vertical"
+            ]
+         },
+         "animations":{
+            "horizontal":"controller.animation.cable.send_power",
+            "vertical":"controller.animation.cable.vertical"
+         }
+      },
+      "component_groups": {
+         "amep:despawn": {
+            "minecraft:instant_despawn": {}
+         }
+      },
+      "components":{
+         "minecraft:health": {
+            "value": 999,
+            "max": 999
+         },
+         "minecraft:collision_box": {
+            "height": 0.0,
+            "width": 0.0
+         },
+         "minecraft:persistent": {},
+         "minecraft:timer": {
+            "looping": true,
+            "time": [2.0, 2.0],
+            "time_down_event": {
+              "event": "amep:transmit_power"
+            }
+         },
+         "minecraft:scale":{
+            "value":0
+         },
+         "minecraft:damage_sensor": {
+            "triggers": {
+               "cause": "all",
+               "deals_damage": false
+            }
+         },
+         "minecraft:physics": {
+            "has_collision": false,
+            "has_gravity": false
+         }
+      },
+      "events": {
+         "amep:transmit_power": {
+            "run_command": {
+               "command": [
+                  "scoreboard players add @e[type=vatonage:power_core,c=1,r=3] power 300",
+                  "tag @s remove valid",
+                  "execute @s ~~~ detect ~ ~-1 ~-1 amep:cable 0 tag @s add valid",
+                  "execute @s ~~~ detect ~-1 ~-1 ~ amep:cableW 0 tag @s add valid",
+                  "execute @s ~~~ detect ~ ~-1 ~1 amep:cableS 0 tag @s add valid",
+                  "execute @s ~~~ detect ~1 ~-1 ~ amep:cableE 0 tag @s add valid",
+                  "execute @s ~~~ detect ~ ~-1 ~1 amep:connector_cable 0 tag @s add valid",
+                  "execute @s ~~~ detect ~1 ~-1 ~ amep:connector_cableW 0 tag @s add valid",
+                  "execute @s ~~~ detect ~ ~-1 ~-1 amep:connector_cableS 0 tag @s add valid",
+                  "execute @s ~~~ detect ~-1 ~-1 ~ amep:connector_cableE 0 tag @s add valid",
+                  "execute @s ~~~ detect ~ ~ ~ amep:cableU 0 tag @s add valid",
+                  "execute @s ~~~ detect ~ ~-1 ~ amep:cableU 0 tag @s add valid",
+                  "execute @s ~~~ detect ~ ~ ~ amep:cableD 0 tag @s add valid",
+                  "execute @s ~~~ detect ~ ~-1 ~ amep:cableD 0 tag @s add valid",
+                  "execute @s ~~~ detect ~ ~-2 ~ amep:cableD 0 tag @s add valid",
+                  "execute @s ~~~ detect ~~-1~ air 0 tag @s remove valid",
+                  "event entity @s[tag=!valid] amep:despawn"
+               ]
+            }
+         },
+         "amep:despawn": {
+            "add": { "component_groups": [ "amep:despawn" ] }
+         }
+      }
+   }
+}

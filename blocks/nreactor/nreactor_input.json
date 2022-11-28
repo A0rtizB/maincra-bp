@@ -1,0 +1,43 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:nreactor_input",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "nreactor_input",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:entity_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         
+         "minecraft:geometry": "geometry.nreactor_input",
+         "minecraft:destroy_time": 999999999,
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 0.4, 0.4 ],
+            "on_tick": {
+               "event": "amep:get_item",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "amep:get_item": {
+            "run_command": {
+               "command": "function nreactor/reactorrod"
+            }
+         }
+      }
+   }
+}

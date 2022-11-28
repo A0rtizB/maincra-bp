@@ -1,0 +1,37 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "amep:reactor_explode",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "armor_stand", "inanimate", "mob" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 1.975
+      },
+      "minecraft:health": {
+        "value": 6,
+        "max": 6
+      },
+      "minecraft:explode": {
+        "breaks_blocks": true,
+        "causes_fire": true,
+        "destroy_affected_by_griefing": true,
+        "fire_affected_by_griefing": true,
+        "fuse_lit": true,
+        "power": 5
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    },
+
+    "events": {
+    }
+  }
+}

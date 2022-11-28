@@ -1,0 +1,28 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"amep:cableD"
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"cableV2",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin": [ -3.5, -4, -3.5 ],
+            "size": [ 7, 25, 7 ]
+         },
+         "minecraft:entity_collision":{
+            "origin": [ -3.5, -4, -3.5 ],
+            "size": [ 7, 25, 7 ]
+         },
+         "minecraft:block_light_absorption": 0,
+         "minecraft:loot": "loot_tables/blocks/cable.json",
+         "minecraft:geometry":"geometry.cablev",
+         "minecraft:destroy_time":0.5
+      }
+   }
+}

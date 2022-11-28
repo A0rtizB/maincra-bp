@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:spawn_quarry_upgrade_lv1"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "IRI",
+      "GIG",
+      "DPD"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
+      "D": {
+        "item": "amep:diamond_circuit"
+      },
+      "P": {
+        "item": "minecraft:netherite_pickaxe"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "R": {
+        "item": "minecraft:redstone_block"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_quarry_upgrade_lv1"
+    }
+  }
+}

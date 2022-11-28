@@ -1,0 +1,17 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"amep:pylon_controller"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"pylon_controller"
+         },
+         "minecraft:display_name":{
+            "value":"Pylon Controller"
+         }
+      }
+   }
+}

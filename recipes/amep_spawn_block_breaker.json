@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:spawn_block_breaker"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "IRI",
+      "GIG",
+      "IPI"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
+      "P": {
+        "item": "minecraft:golden_pickaxe"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_block_breaker"
+    }
+  }
+}

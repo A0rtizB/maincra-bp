@@ -1,0 +1,17 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"amep:uncharged_energyingot"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"uncharged_energyingot"
+         },
+         "minecraft:display_name":{
+            "value":"Uncharged Energy Ingot\n§cRF: 0/500,000"
+         }
+      }
+   }
+}

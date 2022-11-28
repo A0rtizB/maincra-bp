@@ -1,0 +1,14 @@
+{
+   "pools": [
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "amep:spawn_block_breaker",
+               "weight": 1
+            }
+         ]
+      }
+   ]
+}

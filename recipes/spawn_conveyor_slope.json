@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:spawn_conveyor_slope"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "  A",
+      " AN",
+      "ANN"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:iron_ingot"
+      },
+      "N": {
+        "item": "minecraft:iron_nugget"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_conveyor_slope",
+      "count": 6
+    }
+  }
+}

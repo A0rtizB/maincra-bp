@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:spawn_quarry"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "IRI",
+      "GIG",
+      "DPD"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
+      "D": {
+        "item": "minecraft:diamond"
+      },
+      "P": {
+        "item": "minecraft:diamond_pickaxe"
+      },
+      "I": {
+        "item": "amep:iron_circuit"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_quarry"
+    }
+  }
+}

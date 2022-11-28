@@ -1,0 +1,47 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"amep:transfer_cableE"
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"transfer_cable",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin": [ -8.5, 5, -3.5 ],
+            "size": [ 17, 7, 7 ]
+         },
+         "minecraft:entity_collision":{
+            "origin": [ -8.5, 5, -3.5 ],
+            "size": [ 17, 7, 7 ]
+         },
+         "minecraft:ticking":{
+            "looping": true,
+            "range":[ 3.5, 3.5 ],
+            "on_tick":{
+               "event":"amep:sendpower",
+               "target":"self"
+            }
+         },
+         "minecraft:block_light_absorption": 0,
+         "minecraft:rotation":[ 0, 270, 0 ],
+         "minecraft:loot": "loot_tables/blocks/transfer_cable.json",
+         "minecraft:geometry":"geometry.cable",
+         "minecraft:destroy_time":0.5
+      },
+      "events": {
+         "amep:sendpower": {
+            "run_command": {
+               "command": [
+                  "execute @e[type=vatonage:power_core,c=1,r=2,scores={power=100..}] ~~~ detect ~1 ~ ~ amep:transfer_cableE 0 summon amep:cable_send_power ~1 ~1 ~",
+                  "scoreboard players remove @e[type=vatonage:power_core,c=1,r=2,scores={power=100..}] power 100"
+               ]
+            }
+         }
+      }
+   }
+}

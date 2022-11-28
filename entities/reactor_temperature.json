@@ -1,0 +1,29 @@
+{
+   "format_version":"1.8.0",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"amep:reactor_temperature",
+         "runtime_identifier": "minecraft:ender_crystal",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false,
+         "scripts":{
+            "animate":[
+               "walk"
+            ]
+         },
+         "animations":{
+            "walk":"controller.animation.nreactor_radiation"
+         }
+      },
+      "components":{
+         "minecraft:scale": {
+            "value": 0
+         },
+         "minecraft:physics": {
+            "has_collision": false,
+            "has_gravity": false
+         }
+      }
+   }
+}

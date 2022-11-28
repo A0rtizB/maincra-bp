@@ -1,0 +1,189 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"amep:conveyor_slope",
+         "properties":{
+            "amep:rotation":[ 2, 3, 4, 5, 6 ],
+            "amep:rotation_3d":[ 0, 1, 6 ]
+         }
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"conveyorslope",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:geometry":"geometry.vatonageconveyorslope",
+         "minecraft:on_player_placing":{
+            "event":"amep:place"
+         }
+      },
+      "events":{
+         "amep:place":{
+            "sequence": [
+               {
+                  "set_block_property":{
+                     "amep:rotation":"(query.cardinal_facing_2d)"
+                  }
+               },
+               {
+                  "set_block_property":{
+                     "amep:rotation_3d":"(query.cardinal_facing)"
+                  }
+               }
+            ]
+         },
+         "amep:rotate_2_0": {
+            "set_block": { "block_type": "amep:vatonageconveyor_slopeU" }
+         },
+         "amep:rotate_2_1": {
+            "set_block": { "block_type": "amep:vatonageconveyor_slopeD" }
+         },
+         "amep:rotate_3_0": {
+            "set_block": { "block_type": "amep:vatonageconveyor_slopeUs" }
+         },
+         "amep:rotate_3_1": {
+            "set_block": { "block_type": "amep:vatonageconveyor_slopeDs" }
+         },
+         "amep:rotate_4_0": {
+            "set_block": { "block_type": "amep:vatonageconveyor_slopeUw" }
+         },
+         "amep:rotate_4_1": {
+            "set_block": { "block_type": "amep:vatonageconveyor_slopeDw" }
+         },
+         "amep:rotate_5_0": {
+            "set_block": { "block_type": "amep:vatonageconveyor_slopeUe" }
+         },
+         "amep:rotate_5_1": {
+            "set_block": { "block_type": "amep:vatonageconveyor_slopeDe" }
+         }
+      },
+      "permutations":[
+         {
+            "condition":"query.block_property('amep:rotation') == 2 && query.block_property('amep:rotation_3d') == 0",
+            "components":{
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate_2_0",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 2 && query.block_property('amep:rotation_3d') == 1",
+            "components":{
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate_2_1",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 3 && query.block_property('amep:rotation_3d') == 0",
+            "components":{
+               "minecraft:rotation":[ 0, 180, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate_3_0",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 3 && query.block_property('amep:rotation_3d') == 1",
+            "components":{
+               "minecraft:rotation":[ 0, 180, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate_3_1",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 4 && query.block_property('amep:rotation_3d') == 0",
+            "components":{
+               "minecraft:rotation":[ 0, 90, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate_4_0",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 4 && query.block_property('amep:rotation_3d') == 1",
+            "components":{
+               "minecraft:rotation":[ 0, 90, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate_4_1",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 5 && query.block_property('amep:rotation_3d') == 0",
+            "components":{
+               "minecraft:rotation":[ 0, 270, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate_5_0",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 5 && query.block_property('amep:rotation_3d') == 1",
+            "components":{
+               "minecraft:rotation":[ 0, 270, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate_5_1",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 6 || query.block_property('amep:rotation_3d') == 6",
+            "components":{
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate_2_0",
+                     "target":"self"
+                  }
+               }
+            }
+         }
+      ]
+   }
+}

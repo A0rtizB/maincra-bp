@@ -1,0 +1,56 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "amep:radiation_shield",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 2,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "amep:on_use"
+				}
+			},
+			"minecraft:display_name": {
+				"value": "Radiation Shield §9Lasts 10s"
+			},
+			"minecraft:cooldown": {
+				"category": "rad_shield",
+				"duration": 30
+			},
+			"minecraft:durability": {
+                "max_durability": 1
+            },
+			"minecraft:icon": {
+				"texture": "radiation_shield"
+			}
+		},
+		"events": {
+			"amep:on_use": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"tag @s add radiation_shield",
+								"scoreboard objectives add radiation_shield dummy",
+								"scoreboard players set @s radiation_shield 200"
+							]
+						}
+					},
+					{
+						"swing": {
+						}
+					},
+					{
+						"damage": {
+							"type": "magic",
+							"amount": 1,
+							"target": "self"
+						}
+					}
+				]
+			}
+		}
+	}
+}

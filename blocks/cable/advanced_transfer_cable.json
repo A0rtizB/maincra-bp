@@ -1,0 +1,116 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"amep:transfer_cable2",
+         "properties":{
+            "amep:rotation":[ 2, 3, 4, 5 ]
+         }
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"advanced_transfer_cable",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin": [ -3.5, 5, -8 ],
+            "size": [ 7, 7, 16 ]
+         },
+         "minecraft:entity_collision":{
+            "origin": [ -3.5, 5, -8 ],
+            "size": [ 7, 7, 16 ]
+         },
+         "minecraft:ticking":{
+            "looping": true,
+            "range":[ 3.5, 3.5 ],
+            "on_tick":{
+               "event":"amep:sendpower",
+               "target":"self"
+            }
+         },
+         "minecraft:block_light_absorption": 0,
+         "minecraft:geometry":"geometry.cable",
+         "minecraft:loot": "loot_tables/blocks/advanced_transfer_cable.json",
+         "minecraft:destroy_time":0.5,
+         "minecraft:on_player_placing":{
+            "event":"amep:place"
+         }
+      },
+      "events":{
+         "amep:place":{
+            "set_block_property":{
+               "amep:rotation":"(query.cardinal_facing_2d)"
+            }
+         },
+         "amep:rotate3":{
+            "set_block": { "block_type": "amep:transfer_cable2S" }
+         },
+         "amep:rotate4":{
+            "set_block": { "block_type": "amep:transfer_cable2W" }
+         },
+         "amep:rotate5":{
+            "set_block": { "block_type": "amep:transfer_cable2E" }
+         },
+         "amep:sendpower": {
+            "run_command": {
+               "command": [
+                  "execute @e[type=vatonage:power_core,c=1,r=2,scores={power=300..}] ~~~ detect ~ ~ ~-1 amep:transfer_cable2 0 summon amep:cable_send_power2 ~ ~1 ~-1",
+                  "scoreboard players remove @e[type=vatonage:power_core,c=1,r=2,scores={power=300..}] power 300"
+               ]
+            }
+         }
+      },
+      "permutations":[
+         {
+            "condition":"query.block_property('amep:rotation') == 2",
+            "components":{
+               "minecraft:rotation":[ 0, 0, 0 ]
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 3",
+            "components":{
+               "minecraft:rotation":[ 0, 180, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate3",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 4",
+            "components":{
+               "minecraft:rotation":[ 0, 90, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate4",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 5",
+            "components":{
+               "minecraft:rotation":[ 0, 270, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate5",
+                     "target":"self"
+                  }
+               }
+            }
+         }
+      ]
+   }
+}

@@ -1,0 +1,2 @@
+execute @s[tag=collectPower] ~~~ tellraw @p {"rawtext":[{"text": "§f§l[Battery]\n§bMode: §r§bCollect power"}]}
+execute @s[tag=!collectPower] ~~~ tellraw @p {"rawtext":[{"text": "§f§l[Battery]\n§bMode: §r§bDistribute power"}]}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:spawn_cable"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "ADA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:iron_ingot"
+      },
+      "D": {
+        "item": "vatonage:diamond_nugget"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_cable",
+      "count": 4
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+   "format_version":"1.16.210",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"amep:teleport_pylon",
+         "runtime_identifier": "minecraft:ender_crystal",
+         "is_spawnable":true,
+         "is_summonable":true,
+         "is_experimental":false
+      },
+      "components":{
+         "minecraft:interact": {
+            "interactions": [
+               {
+                  "on_interact": {
+                     "filters": {
+                        "all_of": [
+                           {
+                              "test": "has_equipment",
+                              "domain": "hand",
+                              "operator": "equals",
+                              "subject": "other",
+                              "value": "amep:pylon_controller"
+                           },
+                           {
+                              "test": "is_sneaking",
+                              "operator": "equals",
+                              "subject": "other"
+                           }
+                        ]
+                     },
+                     "event": "amep:identifier_movedown",
+                     "target": "self"
+                  },
+                  "swing": true
+               },
+               {
+                  "on_interact": {
+                     "filters": {
+                        "all_of": [
+                           {
+                              "test": "has_equipment",
+                              "domain": "hand",
+                              "operator": "equals",
+                              "subject": "other",
+                              "value": "amep:pylon_controller"
+                           },
+                           {
+                              "test": "is_sneaking",
+                              "operator": "!=",
+                              "subject": "other"
+                           }
+                        ]
+                     },
+                     "event": "amep:identifier_moveup",
+                     "target": "self"
+                  },
+                  "swing": true
+               },
+               {
+                  "on_interact": {
+                     "filters": {
+                        "all_of": [
+                           {
+                              "test": "has_equipment",
+                              "domain": "hand",
+                              "operator": "!=",
+                              "subject": "other",
+                              "value": "amep:pylon_controller"
+                           },
+                           {
+                              "test": "is_sneaking",
+                              "operator": "!=",
+                              "subject": "other"
+                           }
+                        ]
+                     },
+                     "event": "amep:teleport",
+                     "target": "self"
+                  },
+                  "swing": true
+               },
+               {
+                  "on_interact": {
+                     "filters": {
+                        "all_of": [
+                           {
+                              "test": "has_equipment",
+                              "domain": "hand",
+                              "operator": "!=",
+                              "subject": "other",
+                              "value": "amep:pylon_controller"
+                           },
+                           {
+                              "test": "is_sneaking",
+                              "operator": "equals",
+                              "subject": "other"
+                           }
+                        ]
+                     },
+                     "event": "amep:pickup",
+                     "target": "self"
+                  },
+                  "swing": true
+               }
+            ]
+         },
+         "minecraft:persistent": {
+         }
+      },
+      "events": {
+         "minecraft:entity_spawned": {
+            "run_command": {
+               "command": ["scoreboard players set @s pylon_identifier 0"]
+            }
+         },
+         "amep:teleport": {
+            "run_command": {
+               "command": ["function pylon/teleport"]
+            }
+         },
+         "amep:identifier_moveup": {
+            "run_command": {
+               "command": ["function pylon/identifier_moveup"]
+            }
+         },
+         "amep:identifier_movedown": {
+            "run_command": {
+               "command": ["function pylon/identifier_movedown"]
+            }
+         },
+         "amep:pickup": {
+            "run_command": {
+               "command": ["give @p amep:teleport_pylon_spawn_egg", "kill @s"]
+            }
+         }
+      }
+   }
+}

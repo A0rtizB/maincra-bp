@@ -1,0 +1,62 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "amep:block_breaker",
+			"register_to_creative_menu": true
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "block_breaker",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:geometry": "geometry.steam",
+			"minecraft:destroy_time": 1,
+			"minecraft:loot": "loot_tables/blocks/block_breaker.json",
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					2,
+					2
+				],
+				"on_tick": {
+					"event": "amep:break_block",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"amep:break_block": {
+				"run_command": {
+					"command": "summon amep:block_breaker_entity"
+				}
+			}
+		}
+	}
+}

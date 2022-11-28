@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:coolant_input"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " H",
+      "III",
+      "RIR"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "H": {
+        "item": "minecraft:hopper"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_coolant_input"
+    }
+  }
+}

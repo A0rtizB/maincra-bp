@@ -1,0 +1,42 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:quarry_1",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "quarry_1",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:entity_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:destroy_time": 1,
+         "minecraft:loot": "loot_tables/blocks/quarry.json",
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 40, 40 ],
+            "on_tick": {
+               "event": "amep:quarry_mine",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "amep:quarry_mine": {
+            "run_command": {
+               "command": "summon amep:quarry_entity"
+            }
+         }
+      }
+   }
+}

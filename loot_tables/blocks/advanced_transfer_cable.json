@@ -1,0 +1,14 @@
+{
+   "pools": [
+      {
+         "rolls": 1,
+         "entries": [
+            {
+               "type": "item",
+               "name": "amep:transfer_cable2",
+               "weight": 1
+            }
+         ]
+      }
+   ]
+}

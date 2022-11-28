@@ -1,0 +1,130 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"amep:cable",
+         "properties":{
+            "amep:rotation":[ 2, 3, 4, 5 ]
+         }
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"cable",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin": [ -3.5, 5, -8 ],
+            "size": [ 7, 7, 16 ]
+         },
+         "minecraft:entity_collision":{
+            "origin": [ -3.5, 5, -8 ],
+            "size": [ 7, 7, 16 ]
+         },
+         "minecraft:destroy_time":0.5,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:geometry":"geometry.cable",
+         "minecraft:loot": "loot_tables/blocks/cable.json",
+         "minecraft:on_player_placing":{
+            "event":"amep:place"
+         }
+      },
+      "events":{
+         "amep:place":{
+            "set_block_property":{
+               "amep:rotation":"(query.cardinal_facing_2d)"
+            }
+         },
+         "amep:rotate2": {
+            "run_command": {
+               "command": [
+                  "summon amep:cable_place"
+               ]
+            }
+         },
+         "amep:rotate3":{
+            "run_command": {
+               "command": [
+                  "setblock ~~~ amep:cableS",
+                  "summon amep:cable_place"
+               ]
+            }
+         },
+         "amep:rotate4":{
+            "run_command": {
+               "command": [
+                  "setblock ~~~ amep:cableW",
+                  "summon amep:cable_place"
+               ]
+            }
+         },
+         "amep:rotate5":{
+            "run_command": {
+               "command": [
+                  "setblock ~~~ amep:cableE",
+                  "summon amep:cable_place"
+               ]
+            }
+         }
+      },
+      "permutations":[
+         {
+            "condition":"query.block_property('amep:rotation') == 2",
+            "components":{
+               "minecraft:rotation":[ 0, 0, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate2",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 3",
+            "components":{
+               "minecraft:rotation":[ 0, 180, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate3",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 4",
+            "components":{
+               "minecraft:rotation":[ 0, 90, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate4",
+                     "target":"self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('amep:rotation') == 5",
+            "components":{
+               "minecraft:rotation":[ 0, 270, 0 ],
+               "minecraft:ticking":{
+                  "looping": false,
+                  "range":[ 0.1, 0.1 ],
+                  "on_tick":{
+                     "event":"amep:rotate5",
+                     "target":"self"
+                  }
+               }
+            }
+         }
+      ]
+   }
+}

@@ -1,0 +1,59 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:iron_ingot",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_ingot",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "minecraft:lapis_lazuli",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "minecraft:redstone",
+          "weight": 90
+        },
+        {
+          "type": "item",
+          "name": "vatonage:diamond_nugget",
+          "weight": 60
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_nugget",
+          "weight": 80
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_nugget",
+          "weight": 80
+        },
+        {
+          "type": "item",
+          "name": "minecraft:quartz",
+          "weight": 70
+        },
+        {
+          "type": "item",
+          "name": "minecraft:coal",
+          "weight": 100
+        },
+        {
+          "type": "item",
+          "name": "vatonage:emerald_nugget",
+          "weight": 60
+        }
+      ]
+    }
+  ]
+}

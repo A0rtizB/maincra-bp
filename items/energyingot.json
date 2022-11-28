@@ -1,0 +1,17 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"amep:energyingot"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"energyingot"
+         },
+         "minecraft:display_name":{
+            "value":"Energy Ingot\n§aRF: 500,000/500,000"
+         }
+      }
+   }
+}

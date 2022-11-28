@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:netherite_gear"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " N ",
+      "NSN",
+      " N "
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:stick"
+      },
+      "N": {
+        "item": "minecraft:netherite_ingot"
+      }
+    },
+    "result": {
+      "item": "amep:netherite_gear"
+    }
+  }
+}

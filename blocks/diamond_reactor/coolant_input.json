@@ -1,0 +1,51 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:coolant_input",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "coolant_input",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:entity_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:placement_filter": {
+            "conditions": [
+                {
+                    "block_filter": ["amep:reactor_0_active", "amep:reactor_1_active", "amep:reactor_2_active"],
+                    "allowed_faces": ["west"]
+                }
+            ]
+         },
+         "minecraft:geometry": "geometry.coolant_input",
+         "minecraft:destroy_time": 1,
+         "minecraft:loot": "loot_tables/blocks/coolant_input.json",
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 0.4, 0.4 ],
+            "on_tick": {
+               "event": "amep:get_item",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "amep:get_item": {
+            "run_command": {
+               "command": "function coolant"
+            }
+         }
+      }
+   }
+}

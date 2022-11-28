@@ -1,0 +1,70 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:water_tank_1",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "water_tank",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:destroy_time": 1,
+         "minecraft:loot": "loot_tables/blocks/empty_tank.json",
+         "minecraft:geometry": "geometry.liquid_tank_1",
+         "minecraft:on_interact": {
+            "event": "amep:interact"
+         },
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 2, 2 ],
+            "on_tick": {
+               "event": "amep:transfer",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "amep:interact": {
+            "sequence": [
+               {
+                  "condition": "query.get_equipped_item_name == 'water_bucket'",
+                  "set_block": { "block_type": "amep:water_tank_2" },
+                  "run_command": {
+                     "command": [
+                        "give @p bucket",
+                        "playsound bucket.empty_water @p"
+                     ]
+                  },
+                  "decrement_stack": {}
+               },
+               {
+                  "condition": "query.get_equipped_item_name == 'bucket'",
+                  "set_block": { "block_type": "amep:water_tank_0" },
+                  "run_command": {
+                     "command": [
+                        "give @p water_bucket",
+                        "playsound bucket.fill_water @p"
+                     ]
+                  },
+                  "decrement_stack": {}
+               }
+            ]
+         },
+         "amep:transfer": {
+            "run_command": {
+               "command": [
+                  "summon amep:watertank"
+               ]
+            }
+         }
+      }
+   }
+}

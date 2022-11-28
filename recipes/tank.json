@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:spawn_empty_tank"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "GGG",
+      "G G",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glass"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_tank"
+    }
+  }
+}

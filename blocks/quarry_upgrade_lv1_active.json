@@ -1,0 +1,46 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:quarry_upgrade_lv1_active",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "quarry_upgrade_lv1_active",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:destroy_time": 1,
+         "minecraft:loot": "loot_tables/blocks/quarry_upgrade_lv1.json",
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 30, 30 ],
+            "on_tick": {
+               "event": "amep:quarry_mine",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "amep:quarry_mine": {
+            "run_command": {
+               "command": [
+                  "summon amep:quarry_entity",
+                  "tp @e[type=amep:quarry_entity,r=2] ~~~",
+                  "execute @e[type=amep:quarry_entity] ~~~ detect ~~-1~ amep:quarry_1 0 tag @s add onQuarry",
+                  "execute @e[type=amep:quarry_entity,tag=!onQuarry] ~~~ setblock ~~~ amep:quarry_upgrade_lv1",
+                  "execute @e[type=amep:quarry_entity,tag=!onQuarry] ~~~ kill @e[type=amep:quarry_mine_entity,c=1]",
+                  "execute @e[type=amep:quarry_entity,tag=!onQuarry] ~~~ playsound beacon.deactivate @a ~~~",
+                  "kill @e[type=amep:quarry_entity,tag=!onQuarry]"
+               ]
+            }
+         }
+      }
+   }
+}

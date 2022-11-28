@@ -1,0 +1,38 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:reactor_0_bricked",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "reactor_0",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:destroy_time": 1,
+         "minecraft:explosion_resistance": 100.0,
+         "minecraft:loot": "loot_tables/blocks/reactor_0_active.json",
+         "minecraft:on_interact": {
+            "event": "amep:show_status"
+         },
+         "minecraft:on_player_destroyed": {
+            "event": "amep:destroy_reactor"
+         }
+      },
+      "events": {
+         "amep:destroy_reactor": {
+            "run_command": {
+               "command": [ "fill ~ ~1 ~ ~2 ~-1 ~2 air 0 replace amep:reactor_block", "tp @e[type=amep:reactor_temperature,c=1] ~ -40 ~" ]
+            }
+         },
+         "amep:show_status": {
+            "run_command": {
+               "command": "function reactor_bricked_status"
+            }
+         }
+      }
+   }
+}

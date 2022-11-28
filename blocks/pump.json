@@ -1,0 +1,43 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:pump",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "pump",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:entity_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry": "geometry.void_miner",
+         "minecraft:destroy_time": 1,
+         "minecraft:loot": "loot_tables/blocks/pump.json",
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 30, 30 ],
+            "on_tick": {
+               "event": "amep:pump_pump",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "amep:pump_pump": {
+            "run_command": {
+               "command": "summon amep:pump_entity"
+            }
+         }
+      }
+   }
+}

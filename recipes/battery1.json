@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:battery1_controller"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "IDI",
+      "DMD",
+      "IDI"
+    ],
+    "key": {
+      "I": {
+        "item": "amep:energyingot"
+      },
+      "D": {
+        "item": "amep:diamond_circuit"
+      },
+      "M": {
+        "item": "spawn_egg",
+        "data": "query.get_actor_info_id('amep:battery0')"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_battery1_controller"
+    }
+  }
+}

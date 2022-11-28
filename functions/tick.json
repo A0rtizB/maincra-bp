@@ -1,5 +1,9 @@
 {
 	"values": [
-		"machinery2"
+		//Advanced Machinery
+		"machinery2",
+		//Advanced Machinery Expansion
+		"conveyor_slopes",
+		"radiation_shield"
 	]
 }

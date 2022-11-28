@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:uncharged_energyingot"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " N ",
+      "DMD",
+      " N "
+    ],
+    "key": {
+      "N": {
+        "item": "amep:netherite_gear"
+      },
+      "D": {
+        "item": "amep:diamond_circuit"
+      },
+      "M": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "amep:uncharged_energyingot"
+    }
+  }
+}

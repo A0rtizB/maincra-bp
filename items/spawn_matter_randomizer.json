@@ -1,0 +1,32 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"amep:spawn_matter_randomizer"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"spawn_matter_randomizer"
+         },
+         "minecraft:display_name":{
+            "value":"Matter Randomizer §4500 RF/item"
+         },
+         "minecraft:block_placer": {
+           "block": "amep:matter_randomizer"
+         },
+         "minecraft:render_offsets": {
+            "main_hand": {
+               "third_person": {
+                  "position": [1.0, 1.5, 0.0],
+                    "scale": [0.04, 0.04, 0.04]
+                 },
+               "first_person": {
+                  "position": [2.54, -0.8, -4.4],
+                  "scale": [0.05, 0.05, 0.05]
+               }
+             }
+       }
+      }
+   }
+}

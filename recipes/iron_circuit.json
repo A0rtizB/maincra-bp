@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:iron_circuit"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "RDR",
+      "DBD",
+      "RDR"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:comparator"
+      },
+      "D": {
+        "item": "minecraft:iron_ingot"
+      },
+      "B": {
+        "item": "minecraft:iron_block"
+      }
+    },
+    "result": {
+      "item": "amep:iron_circuit"
+    }
+  }
+}

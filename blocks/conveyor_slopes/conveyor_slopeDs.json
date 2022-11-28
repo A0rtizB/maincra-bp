@@ -1,0 +1,45 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"amep:vatonageconveyor_slopeDs"
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"conveyorsloped",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin":[
+               -8,
+               0,
+               -8
+            ],
+            "size":[
+               16,
+               16,
+               16
+            ]
+         },
+         "minecraft:loot": "loot_tables/blocks/vatonageslopeconveyor.json",
+         "minecraft:entity_collision":{
+            "origin":[
+               -8,
+               0,
+               -8
+            ],
+            "size":[
+               16,
+               1,
+               16
+            ]
+         },
+         "minecraft:rotation":[ 0, 180, 0 ],
+         "minecraft:geometry":"geometry.vatonageconveyorslope",
+         "minecraft:destroy_time":0.5,
+         "minecraft:block_light_absorption":0
+      }
+   }
+}

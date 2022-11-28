@@ -1,0 +1,69 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:diamond",
+          "weight": 100
+        },
+        {
+          "type": "item",
+          "name": "minecraft:emerald",
+          "weight": 100
+        },
+        {
+          "type": "item",
+          "name": "minecraft:golden_apple",
+          "weight": 65
+        },
+        {
+          "type": "item",
+          "name": "minecraft:enchanted_golden_apple",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "minecraft:totem",
+          "weight": 40
+        },
+        {
+          "type": "item",
+          "name": "minecraft:netherite_scrap",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "minecraft:netherite_ingot",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_block",
+          "weight": 80
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_block",
+          "weight": 80
+        },
+        {
+          "type": "item",
+          "name": "minecraft:redstone_block",
+          "weight": 80
+        },
+        {
+          "type": "item",
+          "name": "amep:iron_circuit",
+          "weight": 70
+        },
+        {
+          "type": "item",
+          "name": "minecraft:lapis_block",
+          "weight": 75
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:spawn_transfer_cable2"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "ADA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:emerald_block"
+      },
+      "D": {
+        "item": "minecraft:diamond_block"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_transfer_cable2",
+      "count": 1
+    }
+  }
+}

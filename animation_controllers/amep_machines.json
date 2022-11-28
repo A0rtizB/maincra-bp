@@ -1,0 +1,281 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.quarry_mine": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function quarry_mine" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function quarry_mine" ]
+        }
+      }
+    },
+    "controller.animation.quarry_setup": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function quarry_setup" ]
+        }
+      }
+    },
+    "controller.animation.quarry_quarry": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function quarry_quarry" ]
+        }
+      }
+    },
+    "controller.animation.pump_pump": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function pump" ]
+        }
+      }
+    },
+    "controller.animation.quarry_upgrade_setup": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function quarry_upgrade_setup" ]
+        }
+      }
+    },
+    "controller.animation.block_breaker": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function block_breaker" ]
+        }
+      }
+    },
+    "controller.animation.reactor_setup": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function reactor_setup" ]
+        }
+      }
+    },
+    "controller.animation.reactor_0_generate": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function reactor_0_generate" ]
+        }
+      }
+    },
+    "controller.animation.reactor_1_generate": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function reactor_1_generate" ]
+        }
+      }
+    },
+    "controller.animation.reactor_2_generate": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function reactor_2_generate" ]
+        }
+      }
+    },
+    "controller.animation.bonemealer_bonemeal": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function bonemealer/bonemealer" ]
+        }
+      }
+    },
+    "controller.animation.battery0": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function battery0/controller" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function battery0/controller" ]
+        }
+      }
+    },
+    "controller.animation.nreactor_setup": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function nreactor/setup" ]
+        }
+      }
+    },
+    "controller.animation.nreactor_generate": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function nreactor/generate" ]
+        }
+      }
+    },
+    "controller.animation.nreactor_radiation": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/execute @s[scores={reactorrod=-2..}] ~~~ effect @a[r=5,tag=!radiation_shield] wither 1 1 true" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/execute @s[scores={reactorrod=-2..}] ~~~ effect @a[r=5,tag=!radiation_shield] wither 1 1 true", "/execute @a[r=5,tag=radiation_shield] ~~~ particle minecraft:crop_growth_emitter ~~1~" ]
+        }
+      }
+    },
+    "controller.animation.battery1": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function battery1/controller" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function battery1/controller" ]
+        }
+      }
+    },
+    "controller.animation.b1_setup": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function battery1/setup" ]
+        }
+      }
+    },
+    "controller.animation.mobgrinder": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function mobgrinder" ]
+        }
+      }
+    },
+    "controller.animation.me_generator": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function megen/me_generator" ]
+        }
+      }
+    },
+    "controller.animation.me_generator_full": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function megen/me_generator_full" ]
+        }
+      }
+    },
+    "controller.animation.watertank": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function watertank" ]
+        }
+      }
+    },
+    "controller.animation.cable.send_power": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cableW 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cableS 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cableE 0 tp @s ~0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable2 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable2W 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable2S 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable2E 0 tp @s ~0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cable 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cableW 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cableS 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cableE 0 tp @s ~0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cable 0 execute @s ~~~ detect ~-1 ~-1 ~ amep:cableW 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cable 0 execute @s ~~~ detect ~ ~-1 ~-1 amep:cable 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableW 0 execute @s ~~~ detect ~ ~-1 ~1 amep:cableS 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableW 0 execute @s ~~~ detect ~-1 ~-1 ~ amep:cableW 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableS 0 execute @s ~~~ detect ~1 ~-1 ~ amep:cableE 0 tp @s ~0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableS 0 execute @s ~~~ detect ~ ~-1 ~1 amep:cableS 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableE 0 execute @s ~~~ detect ~ ~-1 ~-1 amep:cable 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableE 0 execute @s ~~~ detect ~1 ~-1 ~ amep:cableE 0 tp @s ~0.5 ~ ~"
+          ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cableW 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cableS 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cableE 0 tp @s ~0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable2 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable2W 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable2S 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:transfer_cable2E 0 tp @s ~0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cable 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cableW 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cableS 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cableE 0 tp @s ~0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cable 0 execute @s ~~~ detect ~-1 ~-1 ~ amep:cableW 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cable 0 execute @s ~~~ detect ~ ~-1 ~-1 amep:cable 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableW 0 execute @s ~~~ detect ~ ~-1 ~1 amep:cableS 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableW 0 execute @s ~~~ detect ~-1 ~-1 ~ amep:cableW 0 tp @s ~-0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableS 0 execute @s ~~~ detect ~1 ~-1 ~ amep:cableE 0 tp @s ~0.5 ~ ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableS 0 execute @s ~~~ detect ~ ~-1 ~1 amep:cableS 0 tp @s ~ ~ ~0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableE 0 execute @s ~~~ detect ~ ~-1 ~-1 amep:cable 0 tp @s ~ ~ ~-0.5",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:connector_cableE 0 execute @s ~~~ detect ~1 ~-1 ~ amep:cableE 0 tp @s ~0.5 ~ ~"
+          ]
+        }
+      }
+    },
+    "controller.animation.cable.vertical": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [
+            "/particle minecraft:redstone_wire_dust_particle ~ ~ ~",
+            "/execute @s ~~~ detect ~ ~ ~ amep:cableU 0 tp @s ~ ~2 ~",
+            "/execute @s ~~~ detect ~ ~1 ~ amep:cableU 0 tp @s ~ ~2 ~",
+            "/execute @s ~~~ detect ~ ~-2 ~ amep:cableD 0 tp @s ~ ~-0.3 ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cableD 0 tp @s ~ ~-0.3 ~",
+            "/execute @s ~~~ detect ~ ~ ~ amep:cableD 0 tp @s ~ ~-0.3 ~"
+          ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [
+            "/particle minecraft:redstone_wire_dust_particle ~ ~ ~",
+            "/execute @s ~~~ detect ~ ~ ~ amep:cableU 0 tp @s ~ ~2 ~",
+            "/execute @s ~~~ detect ~ ~1 ~ amep:cableU 0 tp @s ~ ~2 ~",
+            "/execute @s ~~~ detect ~ ~-2 ~ amep:cableD 0 tp @s ~ ~-0.3 ~",
+            "/execute @s ~~~ detect ~ ~-1 ~ amep:cableD 0 tp @s ~ ~-0.3 ~",
+            "/execute @s ~~~ detect ~ ~ ~ amep:cableD 0 tp @s ~ ~-0.3 ~"
+          ]
+        }
+      }
+    },
+    "controller.animation.cable.place": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "/execute @s ~~~ detect ~~~ amep:cable 0 execute @s ~~~ detect ~1 ~ ~ amep:cableW 0 setblock ~~~ amep:connector_cableE",
+            "/execute @s ~~~ detect ~~~ amep:cable 0 execute @s ~~~ detect ~-1 ~ ~ amep:cableE 0 setblock ~~~ amep:connector_cable",
+            "/execute @s ~~~ detect ~~~ amep:cableW 0 execute @s ~~~ detect ~ ~ ~1 amep:cable 0 setblock ~~~ amep:connector_cableW",
+            "/execute @s ~~~ detect ~~~ amep:cableW 0 execute @s ~~~ detect ~ ~ ~-1 amep:cableS 0 setblock ~~~ amep:connector_cable",
+            "/execute @s ~~~ detect ~~~ amep:cableS 0 execute @s ~~~ detect ~1 ~ ~ amep:cableW 0 setblock ~~~ amep:connector_cableS",
+            "/execute @s ~~~ detect ~~~ amep:cableS 0 execute @s ~~~ detect ~-1 ~ ~ amep:cableE 0 setblock ~~~ amep:connector_cableW",
+            "/execute @s ~~~ detect ~~~ amep:cableE 0 execute @s ~~~ detect ~ ~ ~-1 amep:cableS 0 setblock ~~~ amep:connector_cableE",
+            "/execute @s ~~~ detect ~~~ amep:cableE 0 execute @s ~~~ detect ~ ~ ~1 amep:cable 0 setblock ~~~ amep:connector_cableS",
+            "/execute @s ~~~ detect ~~-1~ amep:connector_cableV 0 setblock ~~~ amep:cableU",
+            "/execute @s ~~~ detect ~~-1~ amep:cable 0 setblock ~~~ amep:cableU",
+            "/execute @s ~~~ detect ~~-1~ amep:cableW 0 setblock ~~~ amep:cableU",
+            "/execute @s ~~~ detect ~~-1~ amep:cableS 0 setblock ~~~ amep:cableU",
+            "/execute @s ~~~ detect ~~-1~ amep:cableE 0 setblock ~~~ amep:cableU",
+            "/execute @s ~~~ detect ~~1~ amep:cable 0 setblock ~~~ amep:cableD",
+            "/execute @s ~~~ detect ~~1~ amep:cableW 0 setblock ~~~ amep:cableD",
+            "/execute @s ~~~ detect ~~1~ amep:cableS 0 setblock ~~~ amep:cableD",
+            "/execute @s ~~~ detect ~~1~ amep:cableE 0 setblock ~~~ amep:cableD",
+            "/execute @s ~~~ detect ~~1~ amep:connector_cableV 0 setblock ~~~ amep:cableD",
+            "/execute @s ~~~ detect ~~~ amep:cableU 0 setblock ~~-1~ amep:connector_cableV",
+            "/execute @s ~~~ detect ~~~ amep:cableD 0 setblock ~~1~ amep:connector_cableV",
+            "/tp @s ~ -40 ~"
+          ]
+        }
+      }
+    }
+  }
+}

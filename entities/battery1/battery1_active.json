@@ -1,0 +1,128 @@
+{
+   "format_version":"1.16.210",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"amep:battery1_active",
+         "runtime_identifier": "minecraft:ender_crystal",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false,
+         "scripts":{
+            "animate":[
+               "battery"
+            ]
+         },
+         "animations":{
+            "battery":"controller.animation.battery1"
+         }
+      },
+      "component_groups": {
+         "amep:collectPower": {
+            "minecraft:on_hurt": {
+               "event": "amep:distributePower",
+               "target": "self"
+             }
+         },
+         "amep:distributePower": {
+            "minecraft:on_hurt": {
+               "event": "amep:collectPower",
+               "target": "self"
+             }
+         }
+      },
+      "components":{
+         "minecraft:interact": {
+            "interactions": [
+               {
+                  "on_interact": {
+                     "filters": {
+                        "all_of": [
+                           {
+                              "test": "is_sneaking",
+                              "operator": "equals",
+                              "subject": "other"
+                           }
+                        ]
+                     },
+                     "event": "amep:destroy_reactor",
+                     "target": "self"
+                  },
+                  "swing": true
+               },
+               {
+                  "on_interact": {
+                     "filters": {
+                        "all_of": [
+                           {
+                              "test": "is_sneaking",
+                              "operator": "!=",
+                              "subject": "other"
+                           }
+                        ]
+                     },
+                     "event": "amep:showpower",
+                     "target": "self"
+                  },
+                  "swing": true
+               }
+            ]
+         },
+         "minecraft:persistent": {
+         }
+      },
+      "events": {
+         "minecraft:entity_spawned": {
+            "add": {
+               "component_groups": [
+                  "amep:distributePower"
+               ]
+            },
+            "run_command": {
+               "command": [
+                  "scoreboard players set @s power 0"
+               ]
+            }
+         },
+         "amep:collectPower": {
+            "run_command": {
+               "command": ["tag @s add collectPower", "function battery0/display_mode"]
+            },
+            "add": {
+               "component_groups": [
+                  "amep:collectPower"
+               ]
+            },
+            "remove": {
+               "component_groups": [
+                  "amep:distributePower"
+               ]
+            }
+         },
+         "amep:distributePower": {
+            "run_command": {
+               "command": ["tag @s remove collectPower", "function battery0/display_mode"]
+            },
+            "remove": {
+               "component_groups": [
+                  "amep:collectPower"
+               ]
+            },
+            "add": {
+               "component_groups": [
+                  "amep:distributePower"
+               ]
+            }
+         },
+         "amep:showpower": {
+            "run_command": {
+               "command": ["function battery1/show_power"]
+            }
+         },
+         "amep:destroy_reactor": {
+            "run_command": {
+               "command": [ "fill ~2 ~2 ~2 ~-2 ~-2 ~8 air 0 replace amep:battery1_block", "give @p netherite_block 33", "give @p amep:spawn_battery1_controller", "kill @s" ]
+            }
+         }
+      }
+   }
+}

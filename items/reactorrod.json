@@ -1,0 +1,17 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"amep:reactorrod"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"reactorrod"
+         },
+         "minecraft:display_name":{
+            "value":"Reactor Rod §a300,000 RF/rod"
+         }
+      }
+   }
+}

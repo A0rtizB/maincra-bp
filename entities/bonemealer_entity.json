@@ -1,0 +1,28 @@
+{
+   "format_version":"1.8.0",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"amep:bonemealer_entity",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false,
+         "scripts":{
+            "animate":[
+               "walk"
+            ]
+         },
+         "animations":{
+            "walk":"controller.animation.bonemealer_bonemeal"
+         }
+      },
+      "components":{
+         "minecraft:scale":{
+            "value":0
+         },
+         "minecraft:physics": {
+            "has_collision": false,
+            "has_gravity": false
+         }
+      }
+   }
+}

@@ -1,0 +1,32 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"amep:spawn_tank"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"spawn_tank"
+         },
+         "minecraft:display_name":{
+            "value":"Liquid Tank (Holds 4 buckets)"
+         },
+         "minecraft:block_placer": {
+           "block": "amep:empty_tank"
+         },
+         "minecraft:render_offsets": {
+            "main_hand": {
+               "third_person": {
+                  "position": [1.0, 1.5, 0.0],
+                    "scale": [0.04, 0.04, 0.04]
+                 },
+               "first_person": {
+                  "position": [2.54, -0.8, -4.4],
+                  "scale": [0.05, 0.05, 0.05]
+               }
+             }
+       }
+      }
+   }
+}

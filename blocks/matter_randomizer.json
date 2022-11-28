@@ -1,0 +1,43 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:matter_randomizer",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "matter_randomizer",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:entity_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry": "geometry.matter_converter",
+         "minecraft:destroy_time": 1,
+         "minecraft:loot": "loot_tables/blocks/matter_randomizer.json",
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 1, 1 ],
+            "on_tick": {
+               "event": "amep:get_item",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "amep:get_item": {
+            "run_command": {
+               "command": "function matter_randomizer"
+            }
+         }
+      }
+   }
+}

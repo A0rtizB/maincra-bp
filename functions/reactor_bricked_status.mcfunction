@@ -1,0 +1,1 @@
+tellraw @p {"rawtext":[{"text":"§l[Reactor]\n§r§cReactor malfunction!"}]}

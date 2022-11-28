@@ -1,0 +1,32 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"amep:spawn_pump"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"spawn_pump"
+         },
+         "minecraft:display_name":{
+            "value":"Pump §4150 RF/pump"
+         },
+         "minecraft:block_placer": {
+           "block": "amep:pump"
+         },
+         "minecraft:render_offsets": {
+            "main_hand": {
+               "third_person": {
+                  "position": [1.0, 1.5, 0.0],
+                    "scale": [0.04, 0.04, 0.04]
+                 },
+               "first_person": {
+                  "position": [2.54, -0.8, -4.4],
+                  "scale": [0.05, 0.05, 0.05]
+               }
+             }
+       }
+      }
+   }
+}

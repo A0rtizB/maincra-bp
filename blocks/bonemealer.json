@@ -1,0 +1,40 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:bonemealer",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "bonemealer",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision": {
+             "origin":  [-8, 0, -8],
+             "size":    [16, 16, 16]
+         },
+         "minecraft:geometry": "geometry.auto_farmer",
+         "minecraft:destroy_time": 1,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:loot": "loot_tables/blocks/bonemealer.json",
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 10, 10 ],
+            "on_tick": {
+               "event": "amep:bonemeal",
+               "target": "self"
+            }
+         }
+      },
+      "events": {
+         "amep:bonemeal": {
+            "run_command": {
+               "command": "summon amep:bonemealer_entity"
+            }
+         }
+      }
+   }
+}

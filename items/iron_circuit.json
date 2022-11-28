@@ -1,0 +1,17 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "category": "nature",
+         "identifier":"amep:iron_circuit"
+      },
+      "components":{
+         "minecraft:icon":{
+            "texture":"iron_circuit"
+         },
+         "minecraft:display_name":{
+            "value":"Iron Computer Circuit"
+         }
+      }
+   }
+}

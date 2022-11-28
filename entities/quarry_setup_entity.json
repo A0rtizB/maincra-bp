@@ -1,0 +1,28 @@
+{
+   "format_version":"1.8.0",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"amep:quarry_setup_entity",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false,
+         "scripts":{
+            "animate":[
+               "walk"
+            ]
+         },
+         "animations":{
+            "walk":"controller.animation.quarry_setup"
+         }
+      },
+      "components":{
+         "minecraft:scale":{
+            "value":0
+         },
+         "minecraft:physics": {
+            "has_collision": false,
+            "has_gravity": false
+         }
+      }
+   }
+}

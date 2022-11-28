@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:pylon_controller"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "GRG",
+      "NIN",
+      "NIN"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "N": {
+        "item": "minecraft:iron_nugget"
+      },
+      "G": {
+        "item": "minecraft:gold_nugget"
+      }
+    },
+    "result": {
+      "item": "amep:pylon_controller"
+    }
+  }
+}

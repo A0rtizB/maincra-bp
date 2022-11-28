@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "amep:spawn_cable2"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "ADA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:emerald"
+      },
+      "D": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "amep:spawn_cable2",
+      "count": 2
+    }
+  }
+}

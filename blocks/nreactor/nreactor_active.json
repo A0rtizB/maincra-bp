@@ -1,0 +1,51 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "amep:nreactor_active",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "nreactor_active",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:destroy_time": 1,
+         "minecraft:explosion_resistance": 100.0,
+         "minecraft:loot": "loot_tables/blocks/nreactor_active.json",
+         "minecraft:ticking": {
+            "looping": true,
+            "range": [ 20, 20 ],
+            "on_tick": {
+               "event": "amep:nreactor_generate",
+               "target": "self"
+            }
+         },
+         "minecraft:on_interact": {
+            "event": "amep:show_status"
+         },
+         "minecraft:on_player_destroyed": {
+            "event": "amep:destroy_reactor"
+         }
+      },
+      "events": {
+         "amep:nreactor_generate": {
+            "run_command": {
+               "command": "summon amep:nreactor_generate"
+            }
+         },
+         "amep:destroy_reactor": {
+            "run_command": {
+               "command": [ "fill ~1 ~4 ~2 ~-1 ~-1 ~ air 0 replace amep:reactor_block", "setblock ~-1 ~ ~ air", "tp @e[type=amep:reactor_temperature,r=2,c=1] ~ -40 ~" ]
+            }
+         },
+         "amep:show_status": {
+            "run_command": {
+               "command": "function nreactor/status"
+            }
+         }
+      }
+   }
+}
