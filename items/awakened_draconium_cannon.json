@@ -1,0 +1,47 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+
+      "identifier": "vatonage:awakened_draconium_cannon"
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:foil": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:icon":{
+         "texture":"awakened_draconium_cannon"
+      },
+         "minecraft:durability":{
+            "max_durability":2000
+         },
+      "minecraft:display_name":{
+         "value":"Awakened Draconium Cannon"
+      },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"used"
+            }
+         }
+      },
+      "events":{
+         "used":{
+            "shoot":{
+               "launch_power":3,
+               "angle_offset":"query.cardinal_facing",
+               "projectile":"vatonage:awakened_draconic_cannon"
+            },
+            "run_command":{
+               "command":[
+                  "playsound random.explode @a ~ ~ ~"
+               ]
+            },
+            "damage":{
+               "type":"magic",
+               "amount":1,
+               "target":"self"
+            }
+         }
+      }
+   }
+}

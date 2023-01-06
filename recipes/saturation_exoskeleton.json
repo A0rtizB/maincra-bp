@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:saturation_exoskeleton"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BCB",
+      "CAC",
+      "BCB"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:awakened_draconium_ingot"
+      },
+      "B": {
+        "item": "minecraft:hay_block"
+      },
+      "C": {
+        "item": "vatonage:draconium_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:saturation_exoskeleton"
+    }
+  }
+}

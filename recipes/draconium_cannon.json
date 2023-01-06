@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:draconium_cannon"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "ACC",
+      "C  "
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:draconium_block"
+      },
+      "C": {
+        "item": "vatonage:draconium_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:draconium_cannon"
+    }
+  }
+}

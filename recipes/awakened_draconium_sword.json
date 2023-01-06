@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:awakened_draconium_sword"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "A",
+      "A",
+      "C"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:awakened_draconium_ingot"
+      },
+      "C": {
+        "item": "vatonage:draconium_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:awakened_draconium_sword"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+   "format_version":"1.8.0",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"vatonage:charge_player",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false,
+         "scripts":{
+            "animate":[
+               "walk"
+            ]
+         },
+         "animations":{
+            "walk":"controller.animation.charge_player"
+         }
+      },
+      "components":{
+         "minecraft:scale":{
+            "value":0
+         },
+         "minecraft:instant_despawn":{}
+      }
+   }
+}

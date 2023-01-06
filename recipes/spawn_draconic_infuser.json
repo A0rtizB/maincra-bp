@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:draconic_infuser"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CBC",
+      "BAB",
+      "CBC"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:dragon_heart"
+      },
+      "B": {
+        "item": "vatonage:draconium_ingot"
+      },
+      "C": {
+        "item": "minecraft:diamond_block"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_draconic_infuser"
+    }
+  }
+}

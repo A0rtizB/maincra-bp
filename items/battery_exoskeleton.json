@@ -1,0 +1,41 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+
+      "identifier": "vatonage:battery_exoskeleton"
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:foil": false,
+      "minecraft:stacked_by_data": false,
+      "minecraft:icon":{
+         "texture":"battery_exoskeleton"
+      },
+      "minecraft:display_name":{
+         "value":"Battery Exoskeleton"
+      },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"used"
+            }
+         }
+    },
+      "events":{
+         "used":{
+            "swing":{
+            },
+            "run_command":{
+               "command":[
+                  "execute @s[scores={exoskeleton=1}] ~ ~ ~ give @p vatonage:saturation_exoskeleton",
+                  "execute @s[scores={exoskeleton=2}] ~ ~ ~ give @p vatonage:movement_exoskeleton",
+                  "execute @s[scores={exoskeleton=3}] ~ ~ ~ give @p vatonage:defense_exoskeleton",
+                  "execute @s[scores={exoskeleton=4}] ~ ~ ~ give @p vatonage:battery_exoskeleton",
+                  "scoreboard players set @s exoskeleton 4",
+                  "replaceitem entity @s slot.weapon.mainhand 0 air"
+               ]
+            }
+         }
+      }
+   }
+}

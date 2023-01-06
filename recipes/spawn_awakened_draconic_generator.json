@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:awakened_draconic_generator"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CBC",
+      "BAB",
+      "CBC"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:dragon_heart"
+      },
+      "B": {
+        "item": "vatonage:awakened_draconium_ingot"
+      },
+      "C": {
+        "item": "vatonage:draconium_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_awakened_draconic_generator"
+    }
+  }
+}

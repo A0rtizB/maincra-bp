@@ -4,6 +4,9 @@
 		"machinery2",
 		//Advanced Machinery Expansion
 		"conveyor_slopes",
-		"radiation_shield"
+		"radiation_shield",
+		//Industrial Machinery
+		"dragonauto",
+		"effectcheck"
 	]
 }

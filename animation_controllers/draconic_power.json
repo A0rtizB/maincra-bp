@@ -1,0 +1,77 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.draconic_cannon": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function draconic_cannon" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function draconic_cannon" ]
+        }
+      }
+    },
+    "controller.animation.awakened_draconic_cannon": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function awakened_draconic_cannon" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function awakened_draconic_cannon" ]
+        }
+      }
+    },
+    "controller.animation.activate_draconic1": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_draconic1" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_draconic1" ]
+        }
+      }
+    },
+    "controller.animation.activate_draconic2": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_draconic2" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_draconic2" ]
+        }
+      }
+    },
+    "controller.animation.activate_draconic_infuser": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function activate_draconic_infuser" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function activate_draconic_infuser" ]
+        }
+      }
+    },
+    "controller.animation.charge_player": {
+      "states": {
+        "default": {
+          "transitions": [ { "walking": "(1.0)" } ],
+          "on_entry": [ "/function charge_player" ]
+        },
+        "walking": {
+          "transitions": [ { "default": "(1.0)" } ],
+          "on_entry": [ "/function charge_player" ]
+        }
+      }
+    }
+  }
+}

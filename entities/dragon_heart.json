@@ -1,0 +1,83 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vatonage:dragon_heart",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+         "runtime_identifier":"minecraft:ender_crystal",
+      "scripts": {
+        "animate": [ "dragon_heart_interact" ]
+      },
+      "animations": {
+        "dragon_heart_interact": "controller.animation.dragon_heart_interact"
+      }
+    },
+    "component_groups": {
+      "minecraft:vinteract": {
+        "minecraft:skin_id": {
+          "value": 1
+        }
+      },
+      "vatonage:reset": {
+        "minecraft:skin_id": {
+          "value": 0
+        }
+      }
+    },
+    "events": {
+      "vatonage:clear": {
+          "add": {
+              "component_groups": [
+                  "vatonage:reset"
+              ]
+          },
+          "remove": {
+              "component_groups": [
+                  "minecraft:vinteract"
+              ]
+          }
+      },
+      "minecraft:vinteract_event": {
+        "add": {
+          "component_groups": [
+            "minecraft:vinteract"
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:interact": {
+        "interactions": {
+          "on_interact": {
+            "filters": {
+              "all_of": [
+                { "test": "is_family", "subject": "other", "value": "player" },
+                { "test": "has_equipment", "domain": "hand", "operator": "!=", "subject": "other", "value": "barrier" },
+                { "test": "has_component", "operator": "!=", "value": "minecraft:vinteract" }
+              ]
+            },
+          "event": "minecraft:vinteract_event",
+          "target": "self"
+          },
+          "swing": true,
+          "play_sounds": "",
+          "interact_text": "Interact"
+        }
+      },
+      "minecraft:physics": {
+      },
+                "minecraft:scale": {
+                    "value": 3.0
+                },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/zombie.json"
+      },
+      "minecraft:collision_box": {
+        "width": 1,
+        "height": 1
+      }
+    }
+  }
+}

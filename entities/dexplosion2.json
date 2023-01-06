@@ -1,0 +1,24 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:entity":{
+      "description":{
+         "identifier":"vatonage:dexplosion2",
+         "is_spawnable":false,
+         "is_summonable":true,
+         "is_experimental":false,
+         "runtime_identifier":"minecraft:ender_crystal"
+      },
+      "components":{
+         "minecraft:explode":{
+            "fuse_length":1.0,
+            "fuse_lit":true,
+            "power":4,
+            "breaks_blocks":false
+         },
+         "minecraft:collision_box":{
+            "width":0.1,
+            "height":0.1
+         }
+      }
+   }
+}

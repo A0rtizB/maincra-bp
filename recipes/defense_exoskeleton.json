@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:defense_exoskeleton"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BCB",
+      "CAC",
+      "BCB"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:dragon_heart"
+      },
+      "B": {
+        "item": "vatonage:awakened_draconium_ingot"
+      },
+      "C": {
+        "item": "vatonage:draconium_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:defense_exoskeleton"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:draconium_battery"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "AA",
+      "CC"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:copper_ingot"
+      },
+      "C": {
+        "item": "vatonage:draconium_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:draconium_battery"
+    }
+  }
+}

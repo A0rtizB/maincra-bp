@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "vatonage:draconic_generator"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CBC",
+      "BAB",
+      "CBC"
+    ],
+    "key": {
+      "A": {
+        "item": "vatonage:draconium_block"
+      },
+      "B": {
+        "item": "vatonage:draconium_ingot"
+      },
+      "C": {
+        "item": "minecraft:netherite_ingot"
+      }
+    },
+    "result": {
+      "item": "vatonage:spawn_draconic_generator"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "vatonage:draconium_feature"
+    },
+    "count": 4,
+    "replace_rules": [
+      {
+        "places_block": {
+          "name": "vatonage:draconium_ore",
+          "states": {}
+        },
+        "may_replace": [
+          {
+            "name": "minecraft:end_stone",
+            "states": {}
+          }
+        ]
+      }
+    ]
+  }
+}
