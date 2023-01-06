@@ -1,0 +1,80 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.im.drill": {
+      "states": {
+        "default": {
+          "transitions": [{ "loop": "(1.0)" }],
+          "on_entry": [ "/function im/drill" ]
+        },
+        "loop": {
+          "transitions": [{ "default": "(1.0)" }],
+          "on_entry": [ "/function im/drill" ]
+        }
+      }
+    },
+    "controller.animation.im.pulverizer": {
+      "states": {
+        "default": {
+          "transitions": [{ "loop": "(1.0)" }],
+          "on_entry": [ "/function im/pulverizer/main" ]
+        },
+        "loop": {
+          "transitions": [{ "default": "(1.0)" }],
+          "on_entry": [ "/function im/pulverizer/main" ]
+        }
+      }
+    },
+    "controller.animation.im.redstone_furnace": {
+      "states": {
+        "default": {
+          "transitions": [{ "loop": "(1.0)" }],
+          "on_entry": [ "/function im/redstone_furnace/main" ]
+        },
+        "loop": {
+          "transitions": [{ "default": "(1.0)" }],
+          "on_entry": [ "/function im/redstone_furnace/main" ]
+        }
+      }
+    },
+    "controller.animation.im.item_sorter": {
+      "states": {
+        "default": {
+          "transitions": [{ "loop": "(1.0)" }],
+          "on_entry": [ "/function im/item_sorter/main" ]
+        },
+        "loop": {
+          "transitions": [{ "default": "(1.0)" }],
+          "on_entry": [ "/function im/item_sorter/main" ]
+        }
+      }
+    },
+    "controller.animation.im.item_pipe.place": {
+      "states": {
+        "default": {
+          "on_entry": [ "/function im/item_pipe_place" ]
+        }
+      }
+    },
+    "controller.animation.im.menu": {
+      "states": {
+        "default": {
+          "transitions": [{ "open_menu": "query.life_time >= 0.1" }],
+          "on_entry": [ "/scoreboard objectives add im_menu dummy", "/scoreboard players set @s im_menu 5" ]
+        },
+        "open_menu": {
+          "transitions": [{ "loop": "(1.0)" }],
+          "on_entry": [ "/dialogue open @s @p[m=!c,r=7] \"im:sorter_0\"", "/tellraw @p[m=c,r=7] { \"rawtext\": [ { \"translate\": \"im:message.menu.error.creative\" } ] }" ]
+        },
+        "loop": {
+          "transitions": [{ "loop2": "(1.0)" }],
+          "on_entry": [ "/scoreboard players remove @s[scores={im_menu=0..5}] im_menu 1", "/event entity @s[scores={im_menu=..-1}] im:despawn" ]
+        },
+        "loop2": {
+          "transitions": [{ "loop": "(1.0)" }],
+          "on_entry": [ "/scoreboard players remove @s[scores={im_menu=0..5}] im_menu 1", "/event entity @s[scores={im_menu=..-1}] im:despawn" ]
+        }
+      }
+    }
+  }
+}

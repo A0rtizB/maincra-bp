@@ -1,0 +1,70 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "im:quantum_quarry",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "components": {
+      "minecraft:timer": {
+        "looping": true,
+        "time": [ 10.0, 10.0 ],
+        "time_down_event": {
+          "event": "im:mine"
+        }
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:health": {
+        "value": 999,
+        "max": 999
+      },
+      "minecraft:persistent": {},
+      "minecraft:on_hurt_by_player": {
+        "event": "im:kill"
+      },
+      "minecraft:loot": {
+        "table": "im_loot_tables/quantum_quarry.json"
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "im:mine": {
+        "run_command": {
+          "command": [
+
+            // get power from distributer
+            "execute @e[type=vatonage:power_core,r=35,c=1,scores={power=50..}] ~~~ tag @e[type=im:quantum_quarry,r=35] add im:valid",
+            "execute @s[tag=im:valid] ~~~ scoreboard players remove @e[type=vatonage:power_core,r=35,c=1,scores={power=50..}] power 50",
+
+            // summon if valid
+            "execute @s[tag=im:valid] ~~~ summon im:loot ~~~ im:quantum_quarry_loot",
+
+            // no power signal if not valid
+            "execute @s[tag=!im:valid] ~~~ particle im:not_enough_power_signal ~~1~",
+
+            "tag @s remove im:valid"
+          ]
+        }
+      },
+
+      "im:kill": {
+        "run_command": {
+          "command": [
+            "effect @s invisibility 10 255 true",
+            "kill @s"
+          ]
+        }
+      }
+    }
+  }
+}

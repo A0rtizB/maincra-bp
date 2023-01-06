@@ -1,0 +1,14 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "im:solar_panel_3",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

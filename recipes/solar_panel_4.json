@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:solar_panel_4"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "LRL",
+      "III"
+    ],
+    "key": {
+      "R": {
+        "item": "im:solar_panel_3"
+      },
+      "L": {
+        "item": "minecraft:lapis_block"
+      },
+      "I": {
+        "item": "minecraft:gold_block"
+      },
+      "#": {
+        "item": "minecraft:diamond_block"
+      }
+    },
+    "result": {
+      "item": "im:solar_panel_4"
+    }
+  }
+}

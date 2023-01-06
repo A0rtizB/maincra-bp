@@ -1,0 +1,59 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "im:redstone_furnace",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": { "animate": [ "redstone_furnace" ] },
+      "animations": {
+        "redstone_furnace": "controller.animation.im.redstone_furnace"
+      }
+    },
+
+    "component_groups": {
+      "im:east": { "minecraft:variant": { "value": 1 } },
+      "im:south": { "minecraft:variant": { "value": 2 } },
+      "im:west": { "minecraft:variant": { "value": 3 } }
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:persistent": {},
+      "minecraft:health": {
+        "value": 999,
+        "max": 999
+      },
+      "minecraft:loot": {
+        "table": "im_loot_tables/redstone_furnace.json"
+      },
+      "minecraft:on_hurt_by_player": {
+        "event": "im:kill"
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "im:east": { "add": { "component_groups": [ "im:east" ] } },
+      "im:south": { "add": { "component_groups": [ "im:south" ] } },
+      "im:west": { "add": { "component_groups": [ "im:west" ] } },
+
+
+      "im:kill": {
+        "run_command": {
+          "command": [
+            "effect @s invisibility 10 255 true",
+            "kill @s"
+          ]
+        }
+      }
+    }
+  }
+}

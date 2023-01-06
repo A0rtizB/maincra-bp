@@ -1,0 +1,39 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "im:drill_1"
+      },
+      "components": {
+         "minecraft:creative_category": {
+				"category": "construction"
+			},
+         "minecraft:block_light_absorption": 0,
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "drill_1",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:geometry": "geometry.drill",
+         "minecraft:ticking":{
+            "looping": false,
+            "range": [ 0.01, 0.01 ],
+            "on_tick":{
+               "event": "cc:placed"
+            }
+         }
+      },
+      "events": {
+         "cc:placed": {
+            "run_command": {
+               "command": [
+                  "summon im:drill ~~-0.5~ im:level1",
+                  "setblock ~~-1~ glass 0 destroy",
+                  "setblock ~~~ air"
+               ]
+            }
+         }
+      }
+   }
+}

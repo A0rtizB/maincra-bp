@@ -1,0 +1,50 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "im:menu",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": { "animate": [ "menu" ] },
+      "animations": {
+        "menu": "controller.animation.im.menu"
+      }
+    },
+
+    "component_groups": {
+      "im:despawn": { "minecraft:instant_despawn": {} }
+    },
+
+    "components": {
+      "minecraft:npc": {
+        "npc_data": {
+          "portrait_offsets": {
+            "translate": [-7, 50, 0],
+            "scale": [1.75, 1.75, 1.75]
+          },
+          "picker_offsets": {
+            "translate": [0, 20, 0],
+            "scale": [1.7, 1.7, 1.7]
+          },
+          "skin_list":[
+            {
+              "variant": 0
+            }
+          ]
+        }
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1,
+        "min": 1
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "im:despawn": {
+        "add": { "component_groups": [ "im:despawn" ] }
+      }
+    }
+  }
+}

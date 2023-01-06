@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:item_pipe"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CIC"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:glass"
+      },
+      "C": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "im:item_pipe",
+      "count": 6
+    }
+  }
+}

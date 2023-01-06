@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:quatum_quarry"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "EEE",
+      "EDE",
+      "EEE"
+    ],
+    "key": {
+      "D": {
+        "item": "im:drill_4"
+      },
+      "E": {
+        "item": "minecraft:emerald"
+      }
+    },
+    "result": {
+      "item": "im:quantum_quarry"
+    }
+  }
+}

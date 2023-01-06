@@ -1,0 +1,657 @@
+{
+    "format_version": "1.17",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "im:sorter_0",
+                "npc_name": "Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Item Groups",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_groups_0\""
+                        ]
+                    },
+                    {
+                        "name": "Items",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_0\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_groups_0",
+                "npc_name": "Groups - Item Sorter",
+                "text": "Waste Items: Cobblestone, Cobbled Deepslate, Gravel, Granite, Dirt, Diorite, Andesite\n\nRaw Ores: Raw Copper, Raw Iron, Raw Gold\n\nIngots: Copper Ingot, Iron Ingot, Gold Ingot\n\nPulverized: Pulverized Iron, Pulverized Gold, Pulverized Copper",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_0\""
+                        ]
+                    },
+                    {
+                        "name": "Waste Items",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 1"
+                        ]
+                    },
+                    {
+                        "name": "Raw Ores",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 2"
+                        ]
+                    },
+                    {
+                        "name": "Ingots",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 20"
+                        ]
+                    },
+                    {
+                        "name": "Pulverized",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 3"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_groups_1\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_groups_1",
+                "npc_name": "Groups - Item Sorter",
+                "text": "Raw Food: Raw Salmon, Raw Cod, Raw Rabbit, Raw Mutton, Raw Beef, Raw Porkchop, Raw Chicken\n\nCooked Food: Cooked Salmon, Cooked Cod, Cooked Rabbit, Cooked Mutton, Cooked Beef, Cooked Porkchop, Cooked Chicken\n\nSeeds: Seeds, Pumpkin Seeds, Melon Seeds, Beetroot Seeds\n\nCrops: Carrot, Potato, Beetroot, Wheat, Melon, Sweet Berries, Glow Berries, Pumpkin, Apple",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_groups_0\""
+                        ]
+                    },
+                    {
+                        "name": "Raw Food",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 21"
+                        ]
+                    },
+                    {
+                        "name": "Cooked Food",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 22"
+                        ]
+                    },
+                    {
+                        "name": "Seeds",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 23"
+                        ]
+                    },
+                    {
+                        "name": "Crops",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 24"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_0",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_0\""
+                        ]
+                    },
+                    {
+                        "name": "Emerald",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 4"
+                        ]
+                    },
+                    {
+                        "name": "Diamond",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 5"
+                        ]
+                    },
+                    {
+                        "name": "Coal",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 6"
+                        ]
+                    },
+                    {
+                        "name": "Netherite Scrap",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 7"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_1\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_1",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_0\""
+                        ]
+                    },
+                    {
+                        "name": "Ancient Debris",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 8"
+                        ]
+                    },
+                    {
+                        "name": "Raw Copper",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 9"
+                        ]
+                    },
+                    {
+                        "name": "Raw Iron",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 10"
+                        ]
+                    },
+                    {
+                        "name": "Raw Gold",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 11"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_2\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_2",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_1\""
+                        ]
+                    },
+                    {
+                        "name": "Copper Ingot",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 12"
+                        ]
+                    },
+                    {
+                        "name": "Iron Ingot",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 13"
+                        ]
+                    },
+                    {
+                        "name": "Gold Ingot",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 14"
+                        ]
+                    },
+                    {
+                        "name": "Pulverized Iron",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 15"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_3\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_3",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_2\""
+                        ]
+                    },
+                    {
+                        "name": "Pulverized Gold",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 16"
+                        ]
+                    },
+                    {
+                        "name": "Pulverized Copper",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 17"
+                        ]
+                    },
+                    {
+                        "name": "Dirt",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 18"
+                        ]
+                    },
+                    {
+                        "name": "Cobblestone",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 19"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_4\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_4",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_3\""
+                        ]
+                    },
+                    {
+                        "name": "Raw Salmon",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 25"
+                        ]
+                    },
+                    {
+                        "name": "Raw Cod",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 26"
+                        ]
+                    },
+                    {
+                        "name": "Raw Rabbit",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 27"
+                        ]
+                    },
+                    {
+                        "name": "Raw Mutton",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 28"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_5\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_5",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_4\""
+                        ]
+                    },
+                    {
+                        "name": "Raw Beef",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 29"
+                        ]
+                    },
+                    {
+                        "name": "Raw Porkchop",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 30"
+                        ]
+                    },
+                    {
+                        "name": "Raw Chicken",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 31"
+                        ]
+                    },
+                    {
+                        "name": "Cooked Salmon",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 32"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_6\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_6",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_5\""
+                        ]
+                    },
+                    {
+                        "name": "Cooked Cod",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 33"
+                        ]
+                    },
+                    {
+                        "name": "Cooked Rabbit",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 34"
+                        ]
+                    },
+                    {
+                        "name": "Cooked Mutton",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 35"
+                        ]
+                    },
+                    {
+                        "name": "Cooked Beef",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 36"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_7\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_7",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_6\""
+                        ]
+                    },
+                    {
+                        "name": "Cooked Porkchop",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 37"
+                        ]
+                    },
+                    {
+                        "name": "Cooked Chicken",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 38"
+                        ]
+                    },
+                    {
+                        "name": "Seeds",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 39"
+                        ]
+                    },
+                    {
+                        "name": "Pumpkin Seeds",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 40"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_8\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_8",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_7\""
+                        ]
+                    },
+                    {
+                        "name": "Melon Seeds",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 41"
+                        ]
+                    },
+                    {
+                        "name": "Beetroot Seeds",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 42"
+                        ]
+                    },
+                    {
+                        "name": "Carrot",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 43"
+                        ]
+                    },
+                    {
+                        "name": "Potato",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 44"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_9\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_9",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_8\""
+                        ]
+                    },
+                    {
+                        "name": "Beetroot",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 45"
+                        ]
+                    },
+                    {
+                        "name": "Wheat",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 46"
+                        ]
+                    },
+                    {
+                        "name": "Melon",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 47"
+                        ]
+                    },
+                    {
+                        "name": "Poisonous Potato",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 52"
+                        ]
+                    },
+                    {
+                        "name": "Next Page",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_10\""
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "im:sorter_items_10",
+                "npc_name": "Items - Item Sorter",
+                "text": "",
+                "on_close_commands": [
+                    "/scoreboard players set @s im_menu 5"
+                ],
+                "on_open_commands": [
+                    "/scoreboard players set @s im_menu 6"
+                ],
+                "buttons": [
+                    {
+                        "name": "Return",
+                        "commands": [
+                            "/dialogue open @s @initiator \"im:sorter_items_9\""
+                        ]
+                    },
+                    {
+                        "name": "Sweet Berries",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 48"
+                        ]
+                    },
+                    {
+                        "name": "Glow Berries",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 49"
+                        ]
+                    },
+                    {
+                        "name": "Pumpkin",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 50"
+                        ]
+                    },
+                    {
+                        "name": "Apple",
+                        "commands": [
+                            "/scoreboard players set @e[type=im:item_sorter,c=1] im_item_sorter 51"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

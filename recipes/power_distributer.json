@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:power_distributer"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "R R",
+      "DRD",
+      "I#I"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:iron_block"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "D": {
+        "item": "minecraft:diamond"
+      },
+      "R": {
+        "item": "minecraft:redstone_block"
+      }
+    },
+    "result": {
+      "item": "im:power_distributer"
+    }
+  }
+}

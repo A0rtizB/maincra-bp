@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:oil_generator_1"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "O##",
+      " R ",
+      "R R"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:diamond_block"
+      },
+      "R": {
+        "item": "minecraft:iron_block"
+      },
+      "O": {
+        "item": "minecraft:obsidian"
+      }
+    },
+    "result": {
+      "item": "im:oil_generator_1"
+    }
+  }
+}

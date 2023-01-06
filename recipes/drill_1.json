@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:drill_1"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CPC",
+      "PCP",
+      "PRP"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:planks"
+      },
+      "C": {
+        "item": "minecraft:cobblestone"
+      },
+      "R": {
+        "item": "minecraft:redstone_block"
+      }
+    },
+    "result": {
+      "item": "im:drill_1"
+    }
+  }
+  
+}

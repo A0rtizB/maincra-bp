@@ -1,0 +1,28 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:block": {
+      "description": {
+         "identifier": "im:item_pipe_d"
+      },
+      "components": {
+         "minecraft:loot": "im_loot_tables/item_pipe.json",
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "item_pipe_d",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin": [ -3.5, 4.5, -3.5 ],
+            "size": [ 7, 16, 7 ]
+         },
+         "minecraft:entity_collision":{
+            "origin": [ -3.5, 0, -3.5 ],
+            "size": [ 7, 0.1, 7 ]
+         },
+         "minecraft:destroy_time":0.5,
+         "minecraft:block_light_absorption": 0,
+         "minecraft:geometry": "geometry.item_pipe_v"
+      }
+   }
+}

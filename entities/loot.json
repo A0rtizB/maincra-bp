@@ -1,0 +1,57 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "im:loot",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "im:pulverized_iron": { "minecraft:loot": { "table": "im_loot_tables/items/pulverized_iron.json" } },
+      "im:pulverized_gold": { "minecraft:loot": { "table": "im_loot_tables/items/pulverized_gold.json" } },
+      "im:pulverized_copper": { "minecraft:loot": { "table": "im_loot_tables/items/pulverized_copper.json" } },
+      "im:quantum_quarry_loot": { "minecraft:loot": { "table": "im_loot_tables/quantum_quarry_loot.json" } },
+      "im:cooked_beef": { "minecraft:loot": { "table": "im_loot_tables/items/cooked_beef.json" } },
+      "im:cooked_chicken": { "minecraft:loot": { "table": "im_loot_tables/items/cooked_chicken.json" } },
+      "im:cooked_cod": { "minecraft:loot": { "table": "im_loot_tables/items/cooked_cod.json" } },
+      "im:cooked_mutton": { "minecraft:loot": { "table": "im_loot_tables/items/cooked_mutton.json" } },
+      "im:cooked_porkchop": { "minecraft:loot": { "table": "im_loot_tables/items/cooked_porkchop.json" } },
+      "im:baked_potato": { "minecraft:loot": { "table": "im_loot_tables/items/baked_potato.json" } },
+      "im:cooked_rabbit": { "minecraft:loot": { "table": "im_loot_tables/items/cooked_rabbit.json" } },
+      "im:cooked_salmon": { "minecraft:loot": { "table": "im_loot_tables/items/cooked_salmon.json" } },
+      "im:copper_ingot": { "minecraft:loot": { "table": "im_loot_tables/items/copper_ingot.json" } },
+      "im:gold_ingot": { "minecraft:loot": { "table": "im_loot_tables/items/gold_ingot.json" } },
+      "im:iron_ingot": { "minecraft:loot": { "table": "im_loot_tables/items/iron_ingot.json" } },
+      "im:netherite_scrap": { "minecraft:loot": { "table": "im_loot_tables/items/netherite_scrap.json" } }
+    },
+
+    "events": {
+      "im:pulverized_iron": { "add": { "component_groups": [ "im:pulverized_iron" ] } },
+      "im:pulverized_gold": { "add": { "component_groups": [ "im:pulverized_gold" ] } },
+      "im:pulverized_copper": { "add": { "component_groups": [ "im:pulverized_copper" ] } },
+      "im:quantum_quarry_loot": { "add": { "component_groups": [ "im:quantum_quarry_loot" ] } },
+      "im:cooked_beef": { "add": { "component_groups": [ "im:cooked_beef" ] } },
+      "im:cooked_chicken": { "add": { "component_groups": [ "im:cooked_chicken" ] } },
+      "im:cooked_cod": { "add": { "component_groups": [ "im:cooked_cod" ] } },
+      "im:cooked_mutton": { "add": { "component_groups": [ "im:cooked_mutton" ] } },
+      "im:cooked_porkchop": { "add": { "component_groups": [ "im:cooked_porkchop" ] } },
+      "im:baked_potato": { "add": { "component_groups": [ "im:baked_potato" ] } },
+      "im:cooked_rabbit": { "add": { "component_groups": [ "im:cooked_rabbit" ] } },
+      "im:cooked_salmon": { "add": { "component_groups": [ "im:cooked_salmon" ] } },
+      "im:copper_ingot": { "add": { "component_groups": [ "im:copper_ingot" ] } },
+      "im:gold_ingot": { "add": { "component_groups": [ "im:gold_ingot" ] } },
+      "im:iron_ingot": { "add": { "component_groups": [ "im:iron_ingot" ] } },
+      "im:netherite_scrap": { "add": { "component_groups": [ "im:netherite_scrap" ] } }
+    },
+
+    "components": {
+      "minecraft:health": {
+        "value": 0,
+        "max": 1
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    }
+  }
+}

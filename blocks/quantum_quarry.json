@@ -1,0 +1,40 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "im:quantum_quarry",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:creative_category": {
+				"category": "construction"
+			},
+         "minecraft:block_light_absorption": 0,
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "quantum_quarry",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:geometry": "geometry.quantum_quarry",
+         "minecraft:ticking":{
+            "looping": false,
+            "range": [ 0.01, 0.01 ],
+            "on_tick":{
+               "event": "cc:placed"
+            }
+         }
+      },
+      "events": {
+         "cc:placed": {
+            "run_command": {
+               "command": [
+                  "summon im:quantum_quarry ~~-0.5~",
+                  "setblock ~~-1~ cobbled_deepslate 0 destroy",
+                  "setblock ~~~ air"
+               ]
+            }
+         }
+      }
+   }
+}

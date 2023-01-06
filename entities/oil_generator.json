@@ -1,0 +1,102 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "im:oil_generator",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "im:east": { "minecraft:variant": { "value": 1 } },
+      "im:south": { "minecraft:variant": { "value": 2 } },
+      "im:west": { "minecraft:variant": { "value": 3 } },
+
+      "im:level1": {
+        "minecraft:mark_variant": { "value": 0 },
+        "minecraft:loot": {
+          "table": "im_loot_tables/oil_generator/oil_generator_1.json"
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 10.0, 10.0 ],
+          "time_down_event": {
+            "event": "im:generate_1"
+          }
+        }
+      },
+      "im:level2": {
+        "minecraft:mark_variant": { "value": 1 },
+        "minecraft:loot": {
+          "table": "im_loot_tables/oil_generator/oil_generator_2.json"
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 10.0, 10.0 ],
+          "time_down_event": {
+            "event": "im:generate_2"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:persistent": {},
+      "minecraft:health": {
+        "value": 999,
+        "max": 999
+      },
+      "minecraft:on_hurt_by_player": {
+        "event": "im:kill"
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "im:lv1": { "add": { "component_groups": [ "im:level1" ] } },
+      "im:lv1_e": { "add": { "component_groups": [ "im:level1", "im:east" ] } },
+      "im:lv1_s": { "add": { "component_groups": [ "im:level1", "im:south" ] } },
+      "im:lv1_w": { "add": { "component_groups": [ "im:level1", "im:west" ] } },
+
+      "im:lv2": { "add": { "component_groups": [ "im:level2" ] } },
+      "im:lv2_e": { "add": { "component_groups": [ "im:level2", "im:east" ] } },
+      "im:lv2_s": { "add": { "component_groups": [ "im:level2", "im:south" ] } },
+      "im:lv2_w": { "add": { "component_groups": [ "im:level2", "im:west" ] } },
+
+      "im:generate_1": {
+        "run_command": {
+          "command": [
+            "scoreboard players add @e[type=vatonage:power_core,r=35,c=1] power 80",
+            "particle im:generate_power_signal ~~1.5~"
+          ]
+        }
+      },
+      "im:generate_2": {
+        "run_command": {
+          "command": [
+            "scoreboard players add @e[type=vatonage:power_core,r=35,c=1] power 120",
+            "particle im:generate_power_signal ~~1.5~"
+          ]
+        }
+      },
+
+
+      "im:kill": {
+        "run_command": {
+          "command": [
+            "effect @s invisibility 10 255 true",
+            "kill @s"
+          ]
+        }
+      }
+    }
+  }
+}

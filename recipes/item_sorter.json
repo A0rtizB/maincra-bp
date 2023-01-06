@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:item_sorter"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "R R",
+      "RHR",
+      " R "
+    ],
+    "key": {
+      "H": {
+        "item": "minecraft:hopper"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "im:item_sorter"
+    }
+  }
+}

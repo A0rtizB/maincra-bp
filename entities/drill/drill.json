@@ -1,0 +1,121 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "im:drill",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "im:level1": {
+        "minecraft:loot": {
+          "table": "im_loot_tables/drill/drill_1.json"
+        },
+        "minecraft:mark_variant": { "value": 0 },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 10.0, 10.0 ],
+          "time_down_event": {
+            "event": "im:drill"
+          }
+        }
+      },
+      "im:level2": {
+        "minecraft:loot": {
+          "table": "im_loot_tables/drill/drill_2.json"
+        },
+        "minecraft:mark_variant": { "value": 1 },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 8.0, 8.0 ],
+          "time_down_event": {
+            "event": "im:drill"
+          }
+        }
+      },
+      "im:level3": {
+        "minecraft:loot": {
+          "table": "im_loot_tables/drill/drill_3.json"
+        },
+        "minecraft:mark_variant": { "value": 2 },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 6.0, 6.0 ],
+          "time_down_event": {
+            "event": "im:drill"
+          }
+        }
+      },
+      "im:level4": {
+        "minecraft:loot": {
+          "table": "im_loot_tables/drill/drill_4.json"
+        },
+        "minecraft:mark_variant": { "value": 3 },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 4.0, 4.0 ],
+          "time_down_event": {
+            "event": "im:drill"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:persistent": {},
+      "minecraft:health": {
+        "value": 999,
+        "max": 999
+      },
+      "minecraft:on_hurt_by_player": {
+        "event": "im:kill"
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "im:level1": { "add": { "component_groups": [ "im:level1" ] } },
+      "im:level2": { "add": { "component_groups": [ "im:level2" ] } },
+      "im:level3": { "add": { "component_groups": [ "im:level3" ] } },
+      "im:level4": { "add": { "component_groups": [ "im:level4" ] } },
+
+
+      "im:kill": {
+        "run_command": {
+          "command": [
+            "effect @s invisibility 10 255 true",
+            "kill @s"
+          ]
+        }
+      },
+
+      "im:drill": {
+        "run_command": {
+          "command": [
+
+            // get power from distributer
+            "execute @e[type=vatonage:power_core,r=35,c=1,scores={power=50..}] ~~~ tag @e[type=im:drill,r=35] add im:valid",
+            "execute @s[tag=im:valid] ~~~ scoreboard players remove @e[type=vatonage:power_core,r=35,c=1,scores={power=50..}] power 50",
+
+            // summon if valid
+            "execute @s[tag=im:valid] ~~~ summon im:drill_entity ~~-2~",
+
+            // no power signal if not valid
+            "execute @s[tag=!im:valid] ~~~ particle im:not_enough_power_signal ~~1~",
+
+            "tag @s remove im:valid"
+          ]
+        }
+      }
+    }
+  }
+}

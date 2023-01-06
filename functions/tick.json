@@ -5,8 +5,10 @@
 		//Advanced Machinery Expansion
 		"conveyor_slopes",
 		"radiation_shield",
-		//Industrial Machinery
+		//Draconic Evolution
 		"dragonauto",
-		"effectcheck"
+		"effectcheck",
+		//Industrial Machinery
+		"im/onTick"
 	]
 }

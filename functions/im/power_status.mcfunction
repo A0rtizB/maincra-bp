@@ -1,0 +1,1 @@
+tellraw @a[r=7] { "rawtext": [ { "translate": "im:message.distributer.name" }, { "text": "\n" }, { "translate": "im:message.distributer.status.1" }, { "score": {"name": "@s", "objective": "fluffyFuels" } }] }

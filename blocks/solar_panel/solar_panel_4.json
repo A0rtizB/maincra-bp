@@ -1,0 +1,120 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:block": {
+      "description": {
+         "identifier": "im:solar_panel_4",
+         "properties": {
+            "im:rotation": [ 2, 3, 4, 5 ]
+         }
+      },
+      "events": {
+         "im:placed": {
+            "set_block_property":{
+               "im:rotation": "(query.cardinal_facing_2d)"
+            }
+         },
+         "im:rotateNorth": {
+            "run_command": {
+               "command": [
+                  "setblock ~~~ air",
+                  "summon im:solar_panel ~~-0.5~ im:level4_n"
+               ]
+            }
+         },
+         "im:rotateWest": {
+            "run_command": {
+               "command": [
+                  "setblock ~~~ air",
+                  "summon im:solar_panel ~~-0.5~ im:level4"
+               ]
+            }
+         },
+         "im:rotateSouth": {
+            "run_command": {
+               "command": [
+                  "setblock ~~~ air",
+                  "summon im:solar_panel ~~-0.5~ im:level4_s"
+               ]
+            }
+         },
+         "im:rotateEast": {
+            "run_command": {
+               "command": [
+                  "setblock ~~~ air",
+                  "summon im:solar_panel ~~-0.5~ im:level4_e"
+               ]
+            }
+         }
+      },
+      "components": {
+         "minecraft:creative_category": {
+				"category": "construction"
+			},
+         "minecraft:block_light_absorption": 0,
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "solar_panel_4",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:geometry": "geometry.solar_panel",
+         "minecraft:on_player_placing": {
+            "event": "im:placed"
+         }
+      },
+      "permutations": [
+         {
+            "condition":"query.block_property('im:rotation') == 2",
+            "components": {
+               "minecraft:ticking": {
+                  "looping": false,
+                  "range": [ 0.1, 0.1 ],
+                  "on_tick": {
+                     "event": "im:rotateNorth",
+                     "target": "self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('im:rotation') == 3",
+            "components": {
+               "minecraft:ticking": {
+                  "looping": false,
+                  "range": [ 0.1, 0.1 ],
+                  "on_tick": {
+                     "event": "im:rotateSouth",
+                     "target": "self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('im:rotation') == 4",
+            "components": {
+               "minecraft:ticking": {
+                  "looping": false,
+                  "range": [ 0.1, 0.1 ],
+                  "on_tick": {
+                     "event": "im:rotateWest",
+                     "target": "self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('im:rotation') == 5",
+            "components": {
+               "minecraft:ticking": {
+                  "looping": false,
+                  "range": [ 0.1, 0.1 ],
+                  "on_tick": {
+                     "event": "im:rotateEast",
+                     "target": "self"
+                  }
+               }
+            }
+         }
+      ]
+   }
+}

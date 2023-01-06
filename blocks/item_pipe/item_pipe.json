@@ -1,0 +1,127 @@
+{
+   "format_version": "1.16.0",
+   "minecraft:block": {
+      "description": {
+         "identifier": "im:item_pipe",
+         "properties": {
+            "im:rotation": [ 2, 3, 4, 5 ]
+         }
+      },
+      "events": {
+         "im:placed": {
+            "set_block_property":{
+               "im:rotation": "(query.cardinal_facing_2d)"
+            }
+         },
+         "im:rotateNorth": {
+            "run_command": {
+               "command": [
+                  "setblock ~~~ air",
+                  "setblock ~~~ im:item_pipe_n",
+                  "summon im:item_pipe_place"
+               ]
+            }
+         },
+         "im:rotateWest": {
+            "run_command": {
+               "command": [
+                  "setblock ~~~ air",
+                  "setblock ~~~ im:item_pipe_w",
+                  "summon im:item_pipe_place"
+               ]
+            }
+         },
+         "im:rotateSouth": {
+            "run_command": {
+               "command": [
+                  "setblock ~~~ air",
+                  "setblock ~~~ im:item_pipe_s",
+                  "summon im:item_pipe_place"
+               ]
+            }
+         },
+         "im:rotateEast": {
+            "run_command": {
+               "command": [
+                  "setblock ~~~ air",
+                  "setblock ~~~ im:item_pipe_e",
+                  "summon im:item_pipe_place"
+               ]
+            }
+         }
+      },
+      "components": {
+         "minecraft:creative_category": {
+				"category": "construction"
+			},
+         "minecraft:block_light_absorption": 0,
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "item_pipe",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:geometry": "geometry.item_pipe",
+         "minecraft:on_player_placing": {
+            "event": "im:placed"
+         }
+      },
+      "permutations": [
+         {
+            "condition":"query.block_property('im:rotation') == 2",
+            "components": {
+               "minecraft:ticking": {
+                  "looping": false,
+                  "range": [ 0.1, 0.1 ],
+                  "on_tick": {
+                     "event": "im:rotateNorth",
+                     "target": "self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('im:rotation') == 3",
+            "components": {
+               "minecraft:rotation": [180, 0, 180],
+               "minecraft:ticking": {
+                  "looping": false,
+                  "range": [ 0.1, 0.1 ],
+                  "on_tick": {
+                     "event": "im:rotateSouth",
+                     "target": "self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('im:rotation') == 4",
+            "components": {
+               "minecraft:rotation": [0, 90, 0],
+               "minecraft:ticking": {
+                  "looping": false,
+                  "range": [ 0.1, 0.1 ],
+                  "on_tick": {
+                     "event": "im:rotateWest",
+                     "target": "self"
+                  }
+               }
+            }
+         },
+         {
+            "condition":"query.block_property('im:rotation') == 5",
+            "components": {
+               "minecraft:rotation": [0, -90, 0],
+               "minecraft:ticking": {
+                  "looping": false,
+                  "range": [ 0.1, 0.1 ],
+                  "on_tick": {
+                     "event": "im:rotateEast",
+                     "target": "self"
+                  }
+               }
+            }
+         }
+      ]
+   }
+}

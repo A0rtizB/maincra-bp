@@ -1,0 +1,35 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:drill_4"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CIC",
+      "IDI",
+      "R#R"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:redstone_block"
+      },
+      "C": {
+        "item": "minecraft:iron_block"
+      },
+      "R": {
+        "item": "minecraft:diamond_block"
+      },
+      "I": {
+        "item": "minecraft:gold_block"
+      },
+      "D": {
+        "item": "im:drill_3"
+      }
+    },
+    "result": {
+      "item": "im:drill_4"
+    }
+  }
+}

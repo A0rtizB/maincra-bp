@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:pulverizer"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "RRR",
+      "RIR",
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "I": {
+        "item": "minecraft:iron_block"
+      }
+    },
+    "result": {
+      "item": "im:pulverizer"
+    }
+  }
+}

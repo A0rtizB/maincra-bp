@@ -1,0 +1,16 @@
+give @s im:drill_1
+give @s im:drill_2
+give @s im:drill_3
+give @s im:drill_4
+give @s im:item_pipe
+give @s im:item_sorter
+give @s im:oil_generator_1
+give @s im:oil_generator_2
+give @s im:power_distributer
+give @s im:pulverizer
+give @s im:quantum_quarry
+give @s im:redstone_furnace
+give @s im:solar_panel_1
+give @s im:solar_panel_2
+give @s im:solar_panel_3
+give @s im:solar_panel_4

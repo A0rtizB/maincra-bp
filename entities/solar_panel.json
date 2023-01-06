@@ -1,0 +1,172 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "im:solar_panel",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+
+      //rotations
+
+      "im:rotateNorth": {
+        "minecraft:variant": { "value": 1 }
+      },
+      "im:rotateEast": {
+        "minecraft:variant": { "value": 2 }
+      },
+      "im:rotateSouth": {
+        "minecraft:variant": { "value": 3 }
+      },
+
+      //rotations
+
+
+
+      "im:level1": {
+        "minecraft:loot": {
+          "table": "im_loot_tables/solar_panel/solar_panel_1.json"
+        },
+        "minecraft:mark_variant": { "value": 0 },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 5.0, 5.0 ],
+          "time_down_event": {
+            "event": "im:generate_1"
+          }
+        }
+      },
+      "im:level2": {
+        "minecraft:loot": {
+          "table": "im_loot_tables/solar_panel/solar_panel_2.json"
+        },
+        "minecraft:mark_variant": { "value": 1 },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 5.0, 5.0 ],
+          "time_down_event": {
+            "event": "im:generate_2"
+          }
+        }
+      },
+      "im:level3": {
+        "minecraft:loot": {
+          "table": "im_loot_tables/solar_panel/solar_panel_3.json"
+        },
+        "minecraft:mark_variant": { "value": 2 },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 5.0, 5.0 ],
+          "time_down_event": {
+            "event": "im:generate_3"
+          }
+        }
+      },
+      "im:level4": {
+        "minecraft:loot": {
+          "table": "im_loot_tables/solar_panel/solar_panel_4.json"
+        },
+        "minecraft:mark_variant": { "value": 3 },
+        "minecraft:timer": {
+          "looping": true,
+          "time": [ 5.0, 5.0 ],
+          "time_down_event": {
+            "event": "im:generate_4"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:persistent": {},
+      "minecraft:health": {
+        "value": 999,
+        "max": 999
+      },
+      "minecraft:on_hurt_by_player": {
+        "event": "im:kill"
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "im:level1": { "add": { "component_groups": [ "im:level1" ] } },
+      "im:level1_n": { "add": { "component_groups": [ "im:level1", "im:rotateNorth" ] } },
+      "im:level1_e": { "add": { "component_groups": [ "im:level1", "im:rotateEast" ] } },
+      "im:level1_s": { "add": { "component_groups": [ "im:level1", "im:rotateSouth" ] } },
+
+      "im:level2": { "add": { "component_groups": [ "im:level2" ] } },
+      "im:level2_n": { "add": { "component_groups": [ "im:level2", "im:rotateNorth" ] } },
+      "im:level2_e": { "add": { "component_groups": [ "im:level2", "im:rotateEast" ] } },
+      "im:level2_s": { "add": { "component_groups": [ "im:level2", "im:rotateSouth" ] } },
+
+      "im:level3": { "add": { "component_groups": [ "im:level3" ] } },
+      "im:level3_n": { "add": { "component_groups": [ "im:level3", "im:rotateNorth" ] } },
+      "im:level3_e": { "add": { "component_groups": [ "im:level3", "im:rotateEast" ] } },
+      "im:level3_s": { "add": { "component_groups": [ "im:level3", "im:rotateSouth" ] } },
+
+      "im:level4": { "add": { "component_groups": [ "im:level4" ] } },
+      "im:level4_n": { "add": { "component_groups": [ "im:level4", "im:rotateNorth" ] } },
+      "im:level4_e": { "add": { "component_groups": [ "im:level4", "im:rotateEast" ] } },
+      "im:level4_s": { "add": { "component_groups": [ "im:level4", "im:rotateSouth" ] } },
+
+
+      "im:kill": {
+        "run_command": {
+          "command": [
+            "effect @s invisibility 10 255 true",
+            "kill @s"
+          ]
+        }
+      },
+
+      "im:generate_1": {
+        "run_command": {
+          "command": [
+            "scoreboard players add @e[type=vatonage:power_core,r=35,c=1] power 15",
+            "particle im:generate_power_signal ~~1~"
+          ]
+        }
+      },
+
+
+      "im:generate_2": {
+        "run_command": {
+          "command": [
+            "scoreboard players add @e[type=vatonage:power_core,r=35,c=1] power 25",
+            "particle im:generate_power_signal ~~1~"
+          ]
+        }
+      },
+
+      "im:generate_3": {
+        "run_command": {
+          "command": [
+            "scoreboard players add @e[type=vatonage:power_core,r=35,c=1] power 35",
+            "particle im:generate_power_signal ~~1~"
+          ]
+        }
+      },
+
+
+      "im:generate_4": {
+        "run_command": {
+          "command": [
+            "scoreboard players add @e[type=vatonage:power_core,r=35,c=1] power 45",
+            "particle im:generate_power_signal ~~1~"
+          ]
+        }
+      }
+    }
+  }
+}

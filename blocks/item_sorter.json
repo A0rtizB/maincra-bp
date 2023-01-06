@@ -1,0 +1,39 @@
+{
+   "format_version": "1.16.100",
+   "minecraft:block": {
+      "description": {
+         "identifier": "im:item_sorter",
+         "register_to_creative_menu": true
+      },
+      "components": {
+         "minecraft:creative_category": {
+				"category": "construction"
+			},
+         "minecraft:block_light_absorption": 0,
+         "minecraft:material_instances": {
+            "*": {
+               "texture": "item_sorter",
+               "render_method": "alpha_test"
+            }
+         },
+         "minecraft:geometry": "geometry.item_sorter",
+         "minecraft:ticking":{
+            "looping": false,
+            "range": [ 0.01, 0.01 ],
+            "on_tick":{
+               "event": "cc:placed"
+            }
+         }
+      },
+      "events": {
+         "cc:placed": {
+            "run_command": {
+               "command": [
+                  "summon im:item_sorter ~~-0.5~",
+                  "setblock ~~~ air"
+               ]
+            }
+         }
+      }
+   }
+}

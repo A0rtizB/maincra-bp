@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "im:furnace_pulverized_copper"
+    },
+
+    
+    "tags": [ "furnace", "blast_furnace" ],
+    "input": "im:pulverized_copper",
+    "output": "minecraft:copper_ingot"
+  }
+  
+}

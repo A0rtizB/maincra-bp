@@ -1,0 +1,28 @@
+{
+   "format_version":"1.16.0",
+   "minecraft:block":{
+      "description":{
+         "identifier":"im:connector_pipe_v"
+      },
+      "components":{
+         "minecraft:material_instances":{
+            "*":{
+               "texture":"connector_pipe_v",
+               "render_method":"alpha_test"
+            }
+         },
+         "minecraft:pick_collision":{
+            "origin": [ -8, 4, -8 ],
+            "size": [ 16, 7, 16 ]
+         },
+         "minecraft:entity_collision":{
+            "origin": [ -8, 0, -8 ],
+            "size": [ 16, 0.1, 16 ]
+         },
+         "minecraft:block_light_absorption": 0,
+         "minecraft:loot": "im_loot_tables/item_pipe.json",
+         "minecraft:geometry":"geometry.connector_pipe_v",
+         "minecraft:destroy_time":0.5
+      }
+   }
+}

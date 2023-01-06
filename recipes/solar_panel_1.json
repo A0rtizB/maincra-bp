@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "im:solar_panel_1"
+    },
+
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "DDD",
+      "LRL",
+      "III"
+    ],
+    "key": {
+      "D": {
+        "item": "minecraft:diamond"
+      },
+      "R": {
+        "item": "minecraft:redstone_block"
+      },
+      "L": {
+        "item": "minecraft:lapis_lazuli"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "im:solar_panel_1"
+    }
+  }
+}

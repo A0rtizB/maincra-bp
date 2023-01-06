@@ -1,0 +1,72 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "im:power_distributer",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "components": {
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:health": {
+        "value": 999,
+        "max": 999
+      },
+      "minecraft:persistent": {},
+      "minecraft:on_hurt_by_player": {
+        "event": "im:kill"
+      },
+      "minecraft:loot": {
+        "table": "im_loot_tables/power_distributer.json"
+      },
+      "minecraft:interact": {
+        "interactions": [
+           {
+              "on_interact": {
+                "event": "im:interact",
+                "target": "self"
+              },
+              "swing": true
+           }
+        ]
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "run_command": {
+          "command": [
+            "scoreboard objectives add fluffyFuels dummy",
+            "scoreboard players set @s fluffyFuels 0"
+          ]
+        }
+      },
+
+      "im:interact": {
+        "run_command": {
+          "command": [
+            "function im/power_status"
+          ]
+        }
+      },
+
+      "im:kill": {
+        "run_command": {
+          "command": [
+            "effect @s invisibility 10 255 true",
+            "kill @s"
+          ]
+        }
+      }
+    }
+  }
+}
